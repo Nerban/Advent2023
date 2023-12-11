@@ -1,13 +1,13 @@
 <!-- start page -->
-<section data-background-image="images/theme.jpg" data-background-opacity="0.5">
+<section data-background-image="images/theme.jpg" data-transition="zoom" data-background-opacity="0.5">
     <h1 class="r-fit-text">Adventskalender</h1>
     <hr class="mx-5">
     <br>
-    <div class="w-full h-1/4 bg-opacity-25 rounded-md p-5 aspect-video bg-gray-900 grid grid-cols-6 grid-rows-4 gap-4">
+    <div class="w-full bg-opacity-25 rounded-md p-5 bg-gray-900 grid grid-cols-8 grid-rows-3 gap-2">
         
         {% for key,value in packs %}
             <a href="#{{key}}">
-                <div class="hover:bg-yellow-300 bg-blue-300 p-6 rounded-md">
+                <div class="font-semi-bold hover:bg-yellow-300 aspect-square bg-blue-300 grid place-content-center rounded-md">
                     {{key}} 
                 </div>
             </a>  
@@ -15,7 +15,7 @@
             keine Daten  
         {% endfor %}
         {% for i in range(packs|length ,24) %}
-            <a href="#"><div class="hover:bg-yellow-300 bg-blue-200 p-6 rounded-md">
+            <a href="#"><div class="font-semi-bold hover:bg-yellow-300 aspect-square bg-blue-200 grid place-content-center rounded-md">
                 {{loop.index + packs|length}}
             </div></a>  
             {%else%}
