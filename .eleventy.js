@@ -11,6 +11,7 @@ module.exports = (config) => {
     // This copies anything from `src/images` into `dist/images`.
     // Call it using <img src="images/my-image.jpg" />
     config.addPassthroughCopy("./src/images/");
+    config.addPassthroughCopy("./src/style/");
 
     // Prettifies the output html so the indentations are correct
     config.addTransform("prettier", function (content, outputPath) {

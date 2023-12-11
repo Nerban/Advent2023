@@ -3,7 +3,7 @@
         <h3>{{card.head}}</h3>
 
         <div id ="{{key + '-foc' + '_' + loop.index}}" scry="{{card.card.id}}" class="pb-1">
-            <div class="r-stack mb-5 w-full mb-5  text-center">
+            <div class="r-stack mb-5 w-full text-center">
                 <small data-fragment-index="1" class="fragment fade-out">???</small>
                 <small data-fragment-index="1" class="fragment fade-up"></small>
             </div>
@@ -19,7 +19,7 @@
                     </div>	
                    
                     <a class=" mx-auto grid place-items-center r-stack" target="_blank" href="#">
-                        <div class=" {% if card.card.foil%}foil-image  {% endif %} w-1/2 px-3 grid place-items-center block rounded-3xl">
+                        <div class=" {% if card.card.foil%}foil-image  {% endif %} w-1/2 px-3 grid place-items-center rounded-3xl">
                         <img class=" transition duration-200 card-image shadow-md opacity-100 rounded-3xl" data-src org="" trs="" onerror="populateFoilCard('{{key + '-foc' + '_' + loop.index}}')">
                         </div>
                     </a>
