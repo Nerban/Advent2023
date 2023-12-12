@@ -36,10 +36,21 @@
             imgUri = [myJson.card_faces[0].image_uris.large,myJson.card_faces[1].image_uris.large]
             IMG.setAttribute("org", imgUri[0]);
             IMG.setAttribute("trs", imgUri[1]);
-            if(myJson.type_line.includes("Siege") && Target.id.split("_")[0].includes("foc")){
-              IMG.setAttribute("battle", true)
-              IMG.classList.add("rotate-90")
-              };
+
+            if(Target.id.split("_")[0].includes("foc")){
+              if(myJson.type_line.includes("Siege")){
+                IMG.setAttribute("battle", true)
+                IMG.parentNode.classList.add("card-flip-battle");
+                IMG.parentNode.parentNode.classList.add("-scale-x-100") 
+                }else{
+                  IMG.parentNode.classList.add("card-flip-transform");
+                  IMG.parentNode.parentNode.classList.add("-scale-x-100") 
+                }
+              }
+            if(Target.id.split("_")[0].includes("com")){
+                  IMG.parentNode.classList.add("card-flip-transform");
+                  IMG.parentNode.parentNode.classList.add("-scale-x-100") 
+              }
         }
         else{imgUri = [myJson.image_uris.large]}
 
@@ -50,20 +61,52 @@
     }
 
     function toggleImg(id){
-        const Target = document.getElementById(id);
-        
+        const Target = document.getElementById(id); 
         
         var IMG = Target.getElementsByClassName("card-image")[0];
         const isBattle = IMG.hasAttribute("battle");
+        if(isBattle){
+          if(IMG.parentNode.classList.contains("card-flip-battle")){
+          IMG.parentNode.classList.remove("card-flip-battle"); 
+          IMG.parentNode.classList.add("card-unflip");
+                   setTimeout(function(){
+            IMG.parentNode.parentNode.classList.remove("-scale-x-100")    
+          },250)
+          
+          }else if(IMG.parentNode.classList.contains("card-unflip")){
+            IMG.parentNode.classList.remove("card-unflip"); 
+            IMG.parentNode. classList.add("card-flip-battle");
+            setTimeout(function(){
+              IMG.parentNode.parentNode.classList.add("-scale-x-100")     
+            },250)    
+          }
 
-        IMG.src = IMG.src.includes(IMG.getAttribute("trs"))  ? IMG.getAttribute("org") : IMG.getAttribute("trs");
+        }else{
+          if(IMG.parentNode.classList.contains("card-flip-transform")){
+          IMG.parentNode.classList.remove("card-flip-transform"); 
+          IMG.parentNode.classList.add("card-unflip");
+                   setTimeout(function(){
+            IMG.parentNode.parentNode.classList.remove("-scale-x-100")    
+          },250)
+          
+          }else if(IMG.parentNode.classList.contains("card-unflip")){
+            IMG.parentNode.classList.remove("card-unflip"); 
+            IMG.parentNode. classList.add("card-flip-transform");
+            setTimeout(function(){
+              IMG.parentNode.parentNode.classList.add("-scale-x-100")     
+            },250)    
+          }
 
-        if(isBattle && IMG.classList.contains("rotate-90")){
-          IMG.classList.remove("rotate-90");         
-        }else if(isBattle){
-          IMG.classList.add("rotate-90");
-                   
         }
+        
+        
+        setTimeout(function(){
+              IMG.src = IMG.src.includes(IMG.getAttribute("trs"))  ? IMG.getAttribute("org") : IMG.getAttribute("trs");
+            }, 350);
+        
+        
+
+
     }
 
     

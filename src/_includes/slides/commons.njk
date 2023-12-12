@@ -1,21 +1,22 @@
 <section data-background-image="images/art/art{{key}}.png" data-background-transfom="90deg" data-background-opacity="0.5">
 
     <div class="w-full bg-gray-900 bg-opacity-75 pb-1">
-        <h3>{{pack.commons.head}}</h3>
+        <h4>{{pack.commons.head}}</h4>
         <div class="my-5">
             <hr class="mx-5">
 			<div class="w-full grid grid-cols-4 px-24 grid-rows-2">
 
                 {%for card in pack.commons.cards%}
-                <div class="grid place-items-center mt-5 r-stack shiny">
+                <div class="grid place-items-center r-stack shiny">
                     <img data-fragment-index="{{loop.index + 1}}" class="fragment fade-out shadow-xl  opacity-100 rounded-xl" data-src="images/card_back.jpg">
                     <div id ="{{key + "-com" + "_" + loop.index}}" scry="{{card.id}}"  class="fragment fade-down " data-fragment-index="{{loop.index + 1}}">
-                        <div class="FlipButton bg-gray-900 cursor-pointer drop-shadow-sm hover:text-blue-200 text-white text-md rounded-lg rounded-tr-3xl z-10 font-bold px-3 bg-opacity-50 absolute bottom-0 left-0"
+                        <div class="FlipButton bg-gray-900 cursor-pointer drop-shadow-sm hover:text-blue-200 text-white text-md rounded-lg rounded-tr-3xl z-10 font-bold px-3 bg-opacity-50 absolute bottom-4 left-0"
 										onclick="toggleImg('{{ key + '-com' + '_' + loop.index }}')" >&#10227;</div>	
-                        <a class="grid place-items-center r-stack" target="_blank" href="#">
+                        <a class="grid place-items-center p-0 r-stack" target="_blank" href="#">
                             <div class="
-                            {% if card.foil%}foil-image  {% endif %}w-full h-full block rounded-3xl"></div>
+                            {% if card.foil%}foil-image  {% endif %} p-0 w-full grid place-items-center h-full rounded-3xl">
                             <img  class="card-image shadow-md w-full opacity-100 rounded-xl" data-src  onerror="populateFoilCard('{{key + '-com' + '_' + loop.index}}')">
+                            </div>
                         </a>
 
                     </div>  

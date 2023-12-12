@@ -3,20 +3,27 @@
     <h1 class="r-fit-text">Adventskalender</h1>
     <hr class="mx-5">
     <br>
-    <div class="w-full bg-opacity-25 rounded-md p-5 bg-gray-900 grid grid-cols-8 grid-rows-3 gap-2">
+    <div class="w-full bg-opacity-25 rounded-md p-5 bg-gray-900 grid grid-cols-8 grid-rows-3 gap-5">
         
         {% for key,value in packs %}
             <a href="#{{key}}">
-                <div class="font-semi-bold hover:bg-yellow-300 aspect-square bg-blue-300 grid place-content-center rounded-md">
-                    {{key}} 
+                <div class="font-semi-bold hover:outline outline-2 outline-offset-4 bg-cover bg-center bg-blue-300  outline-yellow-500 shadow-blue-900 aspect-square 
+                {% if loop.index < packs|length %}
+                hover:bg-[url('/images/art/art{{key}}.png')] 
+                hover:text-transparent
+                {% else %}
+                hover:bg-[url('/images/theme.jpg')] 
+                {%  endif %}
+                grid place-content-center rounded-md">
+                    <div class="group-hover:drop-shadow-lg shadow-black font-semibold drop-shadow-md">{{key}}</div>
                 </div>
             </a>  
             {%else%}
             keine Daten  
         {% endfor %}
         {% for i in range(packs|length ,24) %}
-            <a href="#"><div class="font-semi-bold hover:bg-yellow-300 aspect-square bg-blue-200 grid place-content-center rounded-md">
-                {{loop.index + packs|length}}
+            <a href="#"><div class="font-semi-bold hover:outline outline-2 outline-offset-4 bg-cover bg-center bg-blue-200  outline-yellow-500 shadow-blue-900 aspect-square hover:bg-[url('/images/theme.jpg')] grid place-content-center rounded-md">
+               <div class="group-hover:drop-shadow-lg shadow-black font-semibold drop-shadow-md"> {{loop.index + packs|length}} </div>
             </div></a>  
             {%else%}
             keine Daten  
