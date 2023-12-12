@@ -886,54 +886,6 @@ video {
   transform-style: preserve-3d;
 }
 
-.hover\:bg-\[url\(\/images\/art\/art1\.png\)\]:hover {
-  background-image: url(/images/art/art1.png);
-}
-
-.hover\:bg-\[url\(\/images\/art\/art10\.png\)\]:hover {
-  background-image: url(/images/art/art10.png);
-}
-
-.hover\:bg-\[url\(\/images\/art\/art11\.png\)\]:hover {
-  background-image: url(/images/art/art11.png);
-}
-
-.hover\:bg-\[url\(\/images\/art\/art2\.png\)\]:hover {
-  background-image: url(/images/art/art2.png);
-}
-
-.hover\:bg-\[url\(\/images\/art\/art3\.png\)\]:hover {
-  background-image: url(/images/art/art3.png);
-}
-
-.hover\:bg-\[url\(\/images\/art\/art4\.png\)\]:hover {
-  background-image: url(/images/art/art4.png);
-}
-
-.hover\:bg-\[url\(\/images\/art\/art5\.png\)\]:hover {
-  background-image: url(/images/art/art5.png);
-}
-
-.hover\:bg-\[url\(\/images\/art\/art6\.png\)\]:hover {
-  background-image: url(/images/art/art6.png);
-}
-
-.hover\:bg-\[url\(\/images\/art\/art7\.png\)\]:hover {
-  background-image: url(/images/art/art7.png);
-}
-
-.hover\:bg-\[url\(\/images\/art\/art8\.png\)\]:hover {
-  background-image: url(/images/art/art8.png);
-}
-
-.hover\:bg-\[url\(\/images\/art\/art9\.png\)\]:hover {
-  background-image: url(/images/art/art9.png);
-}
-
-.hover\:bg-\[url\(\/images\/theme\.jpg\)\]:hover {
-  background-image: url(/images/theme.jpg);
-}
-
 .hover\:bg-\[url\(\.\.\/images\/art\/art1\.png\)\]:hover {
   background-image: url(../images/art/art1.png);
 }
@@ -944,6 +896,10 @@ video {
 
 .hover\:bg-\[url\(\.\.\/images\/art\/art11\.png\)\]:hover {
   background-image: url(../images/art/art11.png);
+}
+
+.hover\:bg-\[url\(\.\.\/images\/art\/art12\.png\)\]:hover {
+  background-image: url(../images/art/art12.png);
 }
 
 .hover\:bg-\[url\(\.\.\/images\/art\/art2\.png\)\]:hover {
@@ -987,10 +943,6 @@ video {
   color: rgb(191 219 254 / var(--tw-text-opacity));
 }
 
-.hover\:text-transparent:hover {
-  color: transparent;
-}
-
 .hover\:text-yellow-500:hover {
   --tw-text-opacity: 1;
   color: rgb(245 158 11 / var(--tw-text-opacity));
@@ -1003,16 +955,4 @@ video {
 .group:hover .group-hover\:drop-shadow-lg {
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  @keyframes pulse {
-    50% {
-      opacity: .5;
-    }
-  }
-
-  .motion-reduce\:animate-pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
 }
