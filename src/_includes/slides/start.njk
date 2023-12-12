@@ -9,10 +9,12 @@
             <a href="#{{key}}">
                 <div class="font-semi-bold hover:outline outline-2 outline-offset-4 bg-cover bg-center bg-blue-300  outline-yellow-500 shadow-blue-900 aspect-square 
                 {% if loop.index < packs|length %}
-                hover:bg-[url('/images/art/art{{key}}.png')] 
+                hover:bg-[url('images/art/art{{key}}.png')] 
                 hover:text-transparent
                 {% else %}
-                hover:bg-[url('/images/theme.jpg')] 
+                motion-reduce:animate-pulse
+                hover:bg-[url('images/theme.jpg')] 
+                hover:text-yellow-500
                 {%  endif %}
                 grid place-content-center rounded-md">
                     <div class="group-hover:drop-shadow-lg shadow-black font-semibold drop-shadow-md">{{key}}</div>
@@ -22,8 +24,8 @@
             keine Daten  
         {% endfor %}
         {% for i in range(packs|length ,24) %}
-            <a href="#"><div class="font-semi-bold hover:outline outline-2 outline-offset-4 bg-cover bg-center bg-blue-200  outline-yellow-500 shadow-blue-900 aspect-square hover:bg-[url('/images/theme.jpg')] grid place-content-center rounded-md">
-               <div class="group-hover:drop-shadow-lg shadow-black font-semibold drop-shadow-md"> {{loop.index + packs|length}} </div>
+            <a href="#"><div class="font-semi-bold hover:outline outline-2 outline-offset-4 bg-cover bg-center bg-blue-200 hover:text-yellow-500  outline-yellow-500 shadow-blue-900 aspect-square hover:bg-[url('/images/theme.jpg')] grid place-content-center rounded-md">
+               <div class=" group-hover:drop-shadow-lg shadow-black font-semibold drop-shadow-md"> {{loop.index + packs|length}} </div>
             </div></a>  
             {%else%}
             keine Daten  
