@@ -943,6 +943,10 @@ video {
   color: rgb(191 219 254 / var(--tw-text-opacity));
 }
 
+.hover\:text-transparent:hover {
+  color: transparent;
+}
+
 .hover\:text-yellow-500:hover {
   --tw-text-opacity: 1;
   color: rgb(245 158 11 / var(--tw-text-opacity));
