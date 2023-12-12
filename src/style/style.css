@@ -990,6 +990,50 @@ video {
   background-image: url('/images/theme.jpg');
 }
 
+.hover\:bg-\[url\(\/images\/art\/art1\.png\)\]:hover {
+  background-image: url(/images/art/art1.png);
+}
+
+.hover\:bg-\[url\(\/images\/art\/art10\.png\)\]:hover {
+  background-image: url(/images/art/art10.png);
+}
+
+.hover\:bg-\[url\(\/images\/art\/art11\.png\)\]:hover {
+  background-image: url(/images/art/art11.png);
+}
+
+.hover\:bg-\[url\(\/images\/art\/art2\.png\)\]:hover {
+  background-image: url(/images/art/art2.png);
+}
+
+.hover\:bg-\[url\(\/images\/art\/art3\.png\)\]:hover {
+  background-image: url(/images/art/art3.png);
+}
+
+.hover\:bg-\[url\(\/images\/art\/art4\.png\)\]:hover {
+  background-image: url(/images/art/art4.png);
+}
+
+.hover\:bg-\[url\(\/images\/art\/art5\.png\)\]:hover {
+  background-image: url(/images/art/art5.png);
+}
+
+.hover\:bg-\[url\(\/images\/art\/art6\.png\)\]:hover {
+  background-image: url(/images/art/art6.png);
+}
+
+.hover\:bg-\[url\(\/images\/art\/art7\.png\)\]:hover {
+  background-image: url(/images/art/art7.png);
+}
+
+.hover\:bg-\[url\(\/images\/art\/art8\.png\)\]:hover {
+  background-image: url(/images/art/art8.png);
+}
+
+.hover\:bg-\[url\(\/images\/art\/art9\.png\)\]:hover {
+  background-image: url(/images/art/art9.png);
+}
+
 .hover\:text-blue-200:hover {
   --tw-text-opacity: 1;
   color: rgb(191 219 254 / var(--tw-text-opacity));
