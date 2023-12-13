@@ -12,6 +12,7 @@
 <body>
   <div class="reveal">
     <div class="slides">
+      <!--{% include "slides/test.njk" %}-->
       {% include "slides/start.njk" %}
 
       {% for key,pack in packs%}
@@ -20,9 +21,9 @@
       
     </div>
   </div>
-  <div class="hidden rotate-90"></div>
-  <div class="hidden rotate-0"></div>
 
+
+  {%include "3dEffect.njk"%}
   <script src="{{ 'assets/reveal/reveal.js' | url }}"></script>
   <script src="{{ 'assets/reveal/plugin/highlight/highlight.js' | url }}"></script>
   <script src="{{ 'assets/reveal/plugin/notes/notes.js' | url }}"></script>
