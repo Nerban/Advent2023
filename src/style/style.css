@@ -611,16 +611,16 @@ video {
   display: none;
 }
 
+.aspect-\[63\/88\] {
+  aspect-ratio: 63/88;
+}
+
 .aspect-\[88\/63\] {
   aspect-ratio: 88/63;
 }
 
 .aspect-square {
   aspect-ratio: 1 / 1;
-}
-
-.aspect-\[63\/88\] {
-  aspect-ratio: 63/88;
 }
 
 .h-full {
