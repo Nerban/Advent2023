@@ -962,6 +962,10 @@ video {
   background-image: url(../images/theme.jpg);
 }
 
+.hover\:bg-\[url\(\.\.\/images\/art\/art14\.png\)\]:hover {
+  background-image: url(../images/art/art14.png);
+}
+
 .hover\:text-blue-200:hover {
   --tw-text-opacity: 1;
   color: rgb(191 219 254 / var(--tw-text-opacity));

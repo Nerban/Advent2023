@@ -552,5 +552,45 @@
                 "card": {"foil": false, "id":"28a7a9b0-d823-4b34-829f-ade81fc141e0"}
             }
         ]
+    },
+    "15":{
+        "art":{
+            "rotate": false,
+            "id":"fc7fd206-579d-4296-9fe0-4a561fda3c03"
+        },
+        "commons":{
+            "head": "Commons",
+            "cards": [
+                {"foil": false,  "id":"f1b753e2-6e53-4ed1-9be4-66f8eb005a11"},
+                {"foil": false,  "id":"f7017afb-4c7c-4c8d-9c9d-3f056a55561e"},
+                {"foil": false,  "id":"ee4d00b8-1373-47b2-9be5-2199e0b12540"},
+                {"foil": false,  "id":"a28f5de4-2af6-44ff-9bb8-d874f8ae7dd1"},
+                {"foil": false,  "id":"05864d3a-d8bb-4ddf-b721-883632050cb1"},
+                {"foil": false,  "id":"04113b3c-cc8f-4b15-9091-f82ea3df2e7c"},
+                {"foil": false,  "id":"61972ddb-3421-4f22-a47a-89cea944dd02"},
+                {"foil": false,  "id":"fdc37acc-05ba-4457-8a03-d635497bfb1b"}]
+        },
+        "focusCards":[
+            {
+                "head": "Wild Card",
+                "card": {"foil": false, "id":"4f7231f6-8adc-4a68-9984-e56b974c087b"}
+            },
+            {
+                "head": "Rare Card",
+                "card": {"foil": false, "id":"1db1ae7b-ed48-409f-8d50-07c7e8c6c128"}
+            },
+            {
+                "head": "Showcase Card",
+                "card": {"foil": false, "id":"2fa20406-86ce-48a1-876d-c434cfca2237"}
+            },
+            {
+                "head": "Random Foil Card",
+                "card": {"foil": true, "id":"0535b69f-247d-49c9-97e1-d988700578ab"}
+            },
+            {
+                "head": "Token",
+                "card": {"foil": false, "id":"b9be558b-e73d-49dd-a09b-6242b86c4678"}
+            }
+        ]
     }
 }
