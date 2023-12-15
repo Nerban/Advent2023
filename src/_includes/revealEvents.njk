@@ -1,0 +1,17 @@
+<script>
+  Reveal.addEventListener( 'fragmentshown', function( event ) { 
+      set3D_Card(event.fragment.parentNode.id, true)
+
+      //Artimages
+      if(event.fragment.parentNode.id.includes("art")){
+        buildFancyArt(event.fragment.parentNode.id, event.fragment.parentNode.getAttribute("srcy"))
+      }
+    });
+
+  Reveal.addEventListener( 'fragmenthidden', function( event ) { 
+      set3D_Card(event.fragment.parentNode.id, false)
+
+    });
+
+
+</script>

@@ -1,4 +1,58 @@
 <script type="text/javascript">
+function set3D_Card(id, active){
+  var card = document.getElementById(id).getElementsByClassName("3dImage")[0];
+  let bounds = card.getBoundingClientRect(); 
+
+  const addRoteToMouse = ()=> {
+      bounds = card.getBoundingClientRect();
+      document.addEventListener('mousemove', rotateToMouse);
+    }
+
+  const removeRoteToMouse = ()=> {
+        document.removeEventListener('mousemove', rotateToMouse);
+        card.style.transform = '';
+        card.style.background = '';
+    }
+
+  function rotateToMouse(e) {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+  const leftX = mouseX - bounds.x;
+  const topY = mouseY - bounds.y;
+  const center = {
+    x: leftX - bounds.width / 2,
+    y: topY - bounds.height / 2
+  }
+  const distance = Math.sqrt(center.x**2 + center.y**2);
+  
+  card.style.transform = `
+    scale3d(1.07, 1.07, 1.07)
+    rotate3d(
+      ${center.y / 100},
+      ${-center.x / 100},
+      0,
+      ${Math.log(distance)* 2}deg
+    )
+  `;
+  
+  card.querySelector('.glow').style.backgroundImage = `
+    radial-gradient(
+      circle at
+      ${center.x * 2 + bounds.width/2}px
+      ${center.y * 2 + bounds.height/2}px,
+      #ffffff55,
+      #0000000f
+    )
+  `;
+}
+
+
+  card.addEventListener('mouseenter', addRoteToMouse);
+  card.addEventListener('mouseleave', removeRoteToMouse);
+
+
+}
+
   const buildArt= async (id, src)=>{
     const Target = document.getElementById(id);
     var scry_id = Target.getAttribute("scry");
@@ -15,6 +69,24 @@
     Art_IMG.src = src;
     LINK.href = myJson.scryfall_uri;
 }
+
+  const buildFancyArt= async (id, src)=>{
+    const Target = document.getElementById(id);
+    var scry_id = Target.getAttribute("scry");
+
+    const response = await fetch("https://api.scryfall.com/cards/"+scry_id,{method: "GET"});
+    const myJson = await response.json();
+
+    const Art_Title = Target.getElementsByClassName("title")[0];
+    var LINK = Target.getElementsByTagName("a")[0];
+
+    Art_Title.innerHTML = myJson.card_faces[0].name + " - ["+myJson.collector_number+"/81]";
+    LINK.href = myJson.scryfall_uri;
+}
+
+
+
+
     const populateFoilCard = async (id) => {
       
       const Target = document.getElementById(id);
@@ -202,24 +274,24 @@
 
       * {
   box-sizing: border-box;
-}
+  }
 
 
 
-.card {
-  position: relative;
-  
-  transition-duration: 300ms;
-  transition-timing-function: ease-out;
-  transform: rotate3d(0);
-}
+  .card {
+    position: relative;
+    
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+    transform: rotate3d(0);
+  }
 
-.card:hover {
-  transition-duration: 150ms;
+  .card:hover {
+    transition-duration: 150ms;
 
-}
+  }
 
-.card .glow {
-  background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
-}
+  .card .glow {
+    background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
+  }
 </style>

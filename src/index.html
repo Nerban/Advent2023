@@ -12,7 +12,7 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <!--{% include "slides/test.njk" %}-->
+      
       {% include "slides/start.njk" %}
 
       {% for key,pack in packs%}
@@ -21,9 +21,9 @@
       
     </div>
   </div>
+<div class="card hidden"></div>
 
-
-  {%include "3dEffect.njk"%}
+  
   <script src="{{ 'assets/reveal/reveal.js' | url }}"></script>
   <script src="{{ 'assets/reveal/plugin/highlight/highlight.js' | url }}"></script>
   <script src="{{ 'assets/reveal/plugin/notes/notes.js' | url }}"></script>
@@ -35,5 +35,9 @@
       slideNumber: false,
       plugins: [ RevealNotes, RevealHighlight ]
     });
+    
+    
   </script>
+  {%include "revealEvents.njk"%}
+
 </body>

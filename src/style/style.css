@@ -752,6 +752,66 @@ video {
   background-image: url(../images/art/art1.png);
 }
 
+.bg-\[url\(\.\.\/images\/art\/art10\.png\)\] {
+  background-image: url(../images/art/art10.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art11\.png\)\] {
+  background-image: url(../images/art/art11.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art12\.png\)\] {
+  background-image: url(../images/art/art12.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art13\.png\)\] {
+  background-image: url(../images/art/art13.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art14\.png\)\] {
+  background-image: url(../images/art/art14.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art15\.png\)\] {
+  background-image: url(../images/art/art15.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art2\.png\)\] {
+  background-image: url(../images/art/art2.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art3\.png\)\] {
+  background-image: url(../images/art/art3.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art4\.png\)\] {
+  background-image: url(../images/art/art4.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art5\.png\)\] {
+  background-image: url(../images/art/art5.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art6\.png\)\] {
+  background-image: url(../images/art/art6.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art7\.png\)\] {
+  background-image: url(../images/art/art7.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art8\.png\)\] {
+  background-image: url(../images/art/art8.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art9\.png\)\] {
+  background-image: url(../images/art/art9.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art16\.png\)\] {
+  background-image: url(../images/art/art16.png);
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -926,6 +986,10 @@ video {
   background-image: url(../images/art/art13.png);
 }
 
+.hover\:bg-\[url\(\.\.\/images\/art\/art14\.png\)\]:hover {
+  background-image: url(../images/art/art14.png);
+}
+
 .hover\:bg-\[url\(\.\.\/images\/art\/art2\.png\)\]:hover {
   background-image: url(../images/art/art2.png);
 }
@@ -962,8 +1026,8 @@ video {
   background-image: url(../images/theme.jpg);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art14\.png\)\]:hover {
-  background-image: url(../images/art/art14.png);
+.hover\:bg-\[url\(\.\.\/images\/art\/art15\.png\)\]:hover {
+  background-image: url(../images/art/art15.png);
 }
 
 .hover\:text-blue-200:hover {
