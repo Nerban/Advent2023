@@ -12,6 +12,7 @@ function set3D_Card(id, active){
         document.removeEventListener('mousemove', rotateToMouse);
         card.style.transform = '';
         card.style.background = '';
+        card.querySelector('.glow').style.backgroundImage ='';
     }
 
   function rotateToMouse(e) {
@@ -72,6 +73,9 @@ function set3D_Card(id, active){
 
   const buildFancyArt= async (id, src)=>{
     const Target = document.getElementById(id);
+    if(!Target.hasAttribute("scry")){
+      return;
+    }
     var scry_id = Target.getAttribute("scry");
 
     const response = await fetch("https://api.scryfall.com/cards/"+scry_id,{method: "GET"});

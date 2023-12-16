@@ -1,6 +1,11 @@
 {% set custom_id = key + "-art"%}
-   <section data-transition="zoom" data-background-image="images/theme.jpg" data-background-opacity="0.2" 
-   id="{{custom_id}}" scry="{{pack.art.id}}"> 
+{%if config.useArtwork%}
+    
+<section 
+    data-transition="zoom"
+    data-background-image="images/theme.jpg" 
+    data-background-opacity="0.2" 
+    id="{{custom_id}}" scry="{{pack.art.id}}"> 
 
         <h3 >Artwork</h3>
         <div class="r-stack mb-5">
@@ -21,3 +26,17 @@
         </div>
 
     </section>
+
+ {% else %}
+      
+ <section data-transition="zoom" data-background-image="{{"../images/"+config.themeImage | url }}" data-background-opacity="0.2" 
+   id="{{custom_id}}"> 
+
+        <div class=" w-2/3 fade-in bg-center rounded-full m-10 box aspect-square  grid place-items-center relative r-stack  mx-auto  bg-[url({{"../images/"+config.artImage | url }})] bg-cover overflow-clip drop-shadow-xl"
+   >
+            <div class="w-full rounded-full aspect-square grid place-content-center text-black font-black 
+            text-7xl drop-shadow-lg font-serif">{{key}}</div>
+        </div>
+
+    </section>
+    {%endif%}
