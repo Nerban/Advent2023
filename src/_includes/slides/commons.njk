@@ -6,7 +6,7 @@ data-background-image="{{"../images/"+config.themeImage | url }}"
 {%endif%}
  data-background-opacity="0.5">
 
-    <div class="w-full bg-gray-900 bg-opacity-75 pb-1">
+    <div class="w-full bg-gradient-to-br from-yellow-600/30 via-60% via-red-900/60 to-yellow-600/30 drop-shadow-lg ounded-md">
         <h4>{{pack.commons.head}}</h4>
         <div class="my-5">
             <hr class="mx-5">
@@ -16,7 +16,7 @@ data-background-image="{{"../images/"+config.themeImage | url }}"
                 <div class="grid place-items-center r-stack shiny">
                     <img data-fragment-index="{{loop.index + 1}}" class="fragment fade-out shadow-xl  opacity-100 rounded-xl" data-src="images/card_back.jpg">
                     <div id ="{{key + "-com" + "_" + loop.index}}" scry="{{card.id}}"  class="fragment fade-down " data-fragment-index="{{loop.index + 1}}">
-                        <div class="FlipButton bg-gray-900 cursor-pointer drop-shadow-sm hover:text-blue-200 text-white text-md rounded-lg rounded-tr-3xl z-10 font-bold px-3 bg-opacity-50 absolute bottom-4 left-0"
+                        <div class="FlipButton bg-gray-900 cursor-pointer drop-shadow-sm hover:text-yellow-200 text-white text-md rounded-lg rounded-tr-3xl z-10 font-bold px-3 bg-opacity-50 absolute bottom-4 left-0"
 										onclick="toggleImg('{{ key + '-com' + '_' + loop.index }}')" >&#10227;</div>	
                         <a class="grid place-items-center p-0 r-stack" target="_blank" href="#">
                             <div class="
