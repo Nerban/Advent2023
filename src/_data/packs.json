@@ -1,6 +1,6 @@
 {
     "1":{
-        "art":{
+        "art":{"foil":true,
             "rotate": false,
             "id":"a316875b-b73f-4db8-8ca7-ce8b6f6285f2"
         },
@@ -36,7 +36,7 @@
         ]
     },
     "2":{
-        "art":{
+        "art":{"foil":false,
             "rotate": true,
             "id":"bf09b0a9-ef9d-4bc0-b60f-9a4e23293f46"
         },
@@ -72,7 +72,7 @@
         ]
     },
     "3":{
-        "art":{
+        "art":{"foil":false,
             "rotate": false,
             "id":"6400f2e8-0099-4bf1-99cb-87f3b9212e98"
         },
@@ -113,7 +113,7 @@
 
     },
     "4":{
-        "art":{
+        "art":{"foil":false,
             "rotate": false,
             "id":"75b0b4ec-6085-4667-a92e-5c0158340348"
         },
@@ -154,7 +154,7 @@
 
     },
     "5":{
-        "art":{
+        "art":{"foil":false,
             "rotate": false,
             "id":"77a4a1a2-e4c8-40dd-83b8-3fa52345e854"
         },
@@ -195,7 +195,7 @@
 
     },
     "6":{
-        "art":{
+        "art":{"foil":false,
             "rotate": false,
             "id":"8a30646c-8048-43ee-b6c9-bfd512c33877"
         },
@@ -232,7 +232,7 @@
 
     },
     "7":{
-        "art":{
+        "art":{"foil":false,
             "rotate": false,
             "id":"0b3f8794-958c-4304-bf0a-74542ea1369b"
         },
@@ -273,7 +273,7 @@
 
     },
     "8":{
-        "art":{
+        "art":{"foil":false,
             "rotate": true,
             "id":"7d1e12de-de62-4e13-ad1a-43ef80ff4322"
         },
@@ -314,7 +314,7 @@
 
     },
     "9":{
-        "art":{
+        "art":{"foil":true,
             "rotate": true,
             "id":"066139cc-2b4b-4ae7-9da5-a2524a55c218"
         },
@@ -351,7 +351,7 @@
 
     },
     "10":{
-        "art":{
+        "art":{"foil":false,
             "rotate": false,
             "id":"8d13f2d2-a1c9-43e3-ab49-c4223691418f"
         },
@@ -392,7 +392,7 @@
 
     },
     "11":{
-        "art":{
+        "art":{"foil":false,
             "rotate": false,
             "id":"47809901-3c30-468c-9532-37285750c381"
         },
@@ -433,7 +433,7 @@
 
     },
     "12":{
-        "art":{
+        "art":{"foil":false,
             "rotate": false,
             "id":"61819d88-699e-4abe-9b90-861ff423abb4"
         },
@@ -474,7 +474,7 @@
 
     },
     "13":{
-        "art":{
+        "art":{"foil":false,
             "rotate": false,
             "id":"f07b436f-bde1-4f86-98a9-b8a9700cc376"
         },
@@ -514,7 +514,7 @@
         ]
     },
     "14":{
-        "art":{
+        "art":{"foil":false,
             "rotate": false,
             "id":"69a4534e-5c50-43e7-9b85-0a3338f78a7f"
         },
@@ -554,7 +554,7 @@
         ]
     },
     "15":{
-        "art":{
+        "art":{"foil":false,
             "rotate": false,
             "id":"fc7fd206-579d-4296-9fe0-4a561fda3c03"
         },
@@ -594,7 +594,7 @@
         ]
     },    
     "16":{
-        "art":{
+        "art":{"foil":true,
             "rotate": false,
             "id":"f9fb3d6f-4b0a-44a9-bf60-0a701a51e795"
         },
@@ -626,6 +626,47 @@
             {
                 "head": "Random Foil Card",
                 "card": {"foil": true, "id":"a7113c93-6c6d-410f-aeec-abc5ee121cdf"}
+            }
+        ]
+    },    
+    "17":{
+        "art":{
+            "foil":false,
+            "rotate": false,
+            "id":"a09204f2-6559-4dfa-b143-fd62e9222f0e"
+        },
+        "commons":{
+            "head": "Commons",
+            "cards": [
+                {"foil": true,  "id":"7e6151d4-5129-4631-84a1-5cffc551c1e9"},
+                {"foil": false,  "id":"750b2090-7fd4-4048-a148-9a5fc7b6f265"},
+                {"foil": false,  "id":"e08ed414-77bf-402a-82a8-9d4e1bd627a1"},
+                {"foil": false,  "id":"935cb9a2-11ba-45d9-ab38-dea23cecf521"},
+                {"foil": false,  "id":"91fd7350-cc97-4c35-a072-2c826984293c"},
+                {"foil": false,  "id":"c4dabe69-a88f-4e61-a5fb-c4b9ef1c7569"},
+                {"foil": false,  "id":"e585631c-bd41-4b48-aac4-4b6f5636ecd5"},
+                {"foil": false,  "id":"fdc37acc-05ba-4457-8a03-d635497bfb1b"}]
+        },
+        "focusCards":[
+            {
+                "head": "Wild Card",
+                "card": {"foil": false, "id":"93f623da-616e-4067-9ea8-5dfbeef8ce0b"}
+            },
+            {
+                "head": "Rare Card",
+                "card": {"foil": false, "id":"b760ebdf-bea6-4c43-a187-4a02ebf95ebf"}
+            },
+            {
+                "head": "Showcase Card",
+                "card": {"foil": false, "id":"8994524c-b9ff-4ca0-9ff0-2d074911bfe6"}
+            },
+            {
+                "head": "Random Foil Card",
+                "card": {"foil": true, "id":"8bae9f1d-e96d-444c-a0fd-5608243ee6c8"}
+            },
+            {
+                "head": "Token",
+                "card": {"foil": false, "id":"5755cc4c-7132-4741-857a-4a57facdbf68"}
             }
         ]
     }
