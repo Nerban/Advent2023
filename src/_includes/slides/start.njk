@@ -1,33 +1,46 @@
 <!-- start page -->
-<section data-background-image="images/theme.jpg" data-transition="zoom" data-background-opacity="0.5">
-    <h1 class="r-fit-text">Adventskalender</h1>
+<section data-background-image="{{"../images/"+config.themeImage | url }}" data-transition="zoom" data-background-opacity="0.5">
+<div class="bg-gradient-to-br from-yellow-600/30 via-60% via-red-900/60 to-yellow-600/30 drop-shadow  w-full p-10 h-min rounded-lg">
+    <h4 class=" drop-shadow-sm">{{config.title}}</h4>
     <hr class="mx-5">
     <br>
-    <div class="w-full bg-opacity-25 rounded-md p-5 bg-gray-900 grid grid-cols-8 grid-rows-3 gap-5">
+    <div class="w-full m-auto bg-opacity-50 rounded-lg p-5  grid grid-cols-{{config.colNum}} grid-rows-{{config.rowNum}} gap-5">
         
         {% for key,value in packs %}
             <a href="#{{key}}">
-                <div class="font-semi-bold hover:outline outline-2 outline-offset-4 bg-cover bg-center bg-blue-300  outline-yellow-500 shadow-blue-900 aspect-square 
-                {% if loop.index < packs|length %}
-                hover:bg-[url({{ '../images/art/art'+key+'.png' | url }})] 
-                hover:text-transparent
-                {% else %}
-                hover:bg-[url({{'../images/theme.jpg' | url }})] 
-                hover:text-yellow-500
+                <div class="
+                font-semi-bold 
+                hover:outline outline-2 outline-offset-4  outline-yellow-500
+                text-yellow-500 drop-shadow-lg
+                bg-cover bg-center hover:bg-transparent
+                hover:bg-[url({{ "../images/"+config.artImage | url }})] 
+                aspect-square rounded-full shadow-blue-900 
+                grid place-content-center 
+                hover:text-transparent               
+                {% if loop.index > packs|length %}
+                hover:grayscale
                 {%  endif %}
-                grid place-content-center rounded-md">
-                    <div class="group-hover:drop-shadow-lg shadow-black font-semibold drop-shadow-md">{{key}}</div>
+                ">
+                    <div class=" shadow-black font-semibold drop-shadow-md">{{key}}</div>
                 </div>
             </a>  
-            {%else%}
-            keine Daten  
+
         {% endfor %}
-        {% for i in range(packs|length ,24) %}
-            <a href="#"><div class="font-semi-bold hover:outline outline-2 outline-offset-4 bg-cover bg-center bg-blue-200 hover:text-yellow-500  outline-yellow-500 shadow-blue-900 aspect-square hover:bg-[url({{ '../images/theme.jpg' | url }})]  grid place-content-center rounded-md">
-               <div class=" group-hover:drop-shadow-lg shadow-black font-semibold drop-shadow-md"> {{loop.index + packs|length}} </div>
+        {% for i in range(packs|length ,config.packNum) %}
+            <a href="#"><div class="font-semi-bold 
+                hover:outline outline-2 outline-offset-4  outline-yellow-500
+                bg-cover bg-center hover:bg-transparent
+                hover:bg-[url({{ "../images/"+config.artImage | url }})] 
+                aspect-square rounded-full shadow-blue-900 
+                grid place-content-center 
+                hover:text-transparent               
+                grayscale drop-shadow-lg
+                ">
+               <div class="  shadow-black font-semibold drop-shadow-md"> {{loop.index + packs|length}} </div>
             </div></a>  
             {%else%}
             keine Daten  
         {% endfor %}
     </div>
+</div>
 </section>

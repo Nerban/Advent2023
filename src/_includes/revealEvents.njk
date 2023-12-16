@@ -11,7 +11,9 @@
     });
 
   Reveal.addEventListener( 'fragmenthidden', function( event ) { 
-      set3D_Card(event.fragment.parentNode.id, false)
+         //Artimages
+      if(event.fragment.parentNode.id.includes("art")){
+      set3D_Card(event.fragment.parentNode.id, false)      }
 
     });
 

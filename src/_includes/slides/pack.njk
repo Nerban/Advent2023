@@ -1,6 +1,9 @@
 <section>
-    
-    {% include "slides/art.njk" %}
+    {%if config.useArtwork%}
+        {% include "slides/art.njk" %}
+    {% else %}
+        {% include "slides/noart.njk" %}
+    {%endif%}
     {% include "slides/commons.njk" %}
     
     {% for card in pack.focusCards %}

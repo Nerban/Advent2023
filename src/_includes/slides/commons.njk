@@ -1,4 +1,10 @@
-<section data-background-image="images/art/art{{key}}.png" data-background-transfom="90deg" data-background-opacity="0.5">
+<section
+{%if config.useArtwork%} 
+data-background-image="images/art/art{{key}}.png" 
+{% else %}
+data-background-image="{{"../images/"+config.themeImage | url }}" 
+{%endif%}
+ data-background-opacity="0.5">
 
     <div class="w-full bg-gray-900 bg-opacity-75 pb-1">
         <h4>{{pack.commons.head}}</h4>
