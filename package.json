@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "eleventy --serve --quiet",
     "css": "tailwindcss -i ./src/tailwind.css -o ./src/style/style.css --watch ",
-
     "start": "eleventy --serve --quiet",
     "build": "NODE_ENV=production eleventy",
     "tidy": "prettier ./src --write"
@@ -21,6 +20,7 @@
   },
   "homepage": "https://github.com/Bullrich/reveal-eleventy-template#readme",
   "dependencies": {
+    "missing": "^0.0.1",
     "reveal.js": "^4.6.1"
   },
   "main": ".eleventy.js",
