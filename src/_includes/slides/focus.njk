@@ -2,7 +2,7 @@
 {%if config.useArtwork%} 
 data-background-image="images/art/art{{key}}.png" 
 {% else %}
-data-background-image="{{"../images/"+config.themeImage | url }}" 
+data-background-image="images/{{config.themeImage}}"
 {%endif%}
 data-background-opacity="0.5">
     <div class="w-full bg-gradient-to-br from-yellow-600/30 via-60% via-red-900/60 to-yellow-600/30 drop-shadow-lg rounded-md">
