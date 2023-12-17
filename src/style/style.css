@@ -849,6 +849,10 @@ video {
   background-image: url(../images/art/art9.png);
 }
 
+.bg-\[url\(\.\.\/images\/art\/art18\.png\)\] {
+  background-image: url(../images/art/art18.png);
+}
+
 .from-yellow-600\/30 {
   --tw-gradient-from: rgb(217 119 6 / 0.3) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(217 119 6 / 0) var(--tw-gradient-to-position);
@@ -1133,6 +1137,10 @@ video {
 
 .hover\:bg-\[url\(\.\.\/images\/theme\.jpg\)\]:hover {
   background-image: url(../images/theme.jpg);
+}
+
+.hover\:bg-\[url\(\.\.\/images\/art\/art17\.png\)\]:hover {
+  background-image: url(../images/art/art17.png);
 }
 
 .hover\:text-transparent:hover {
