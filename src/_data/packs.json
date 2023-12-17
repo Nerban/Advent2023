@@ -74,40 +74,40 @@
             }
         ]
     },
-	    "3":{
+	"3":{
         "commons":{
             "head": "Commons",
             "cards": [
                 {"foil": false,  "id":"9048cd9d-df3f-4705-a5f4-e5b09760c631"},
                 {"foil": false,  "id":"8321857e-7977-46dd-8357-d732312e5261"},
-                {"foil": false,  "id":""},
-                {"foil": false,  "id":""},
-                {"foil": false,  "id":""},
-                {"foil": false,  "id":""},
-                {"foil": false,  "id":""},
-                {"foil": false,  "id":""},
-                {"foil": false,  "id":""},
-				{"foil": false,  "id":""}]
+                {"foil": false,  "id":"ac5e9a53-cc4f-4ced-8088-5a73d619eae3"},
+                {"foil": false,  "id":"27acf726-52f5-493d-8678-c12485f67747"},
+                {"foil": false,  "id":"a6e53495-c76c-4cd4-b93e-b2c491d2c13a"},
+                {"foil": false,  "id":"82e6b971-3f5b-47e7-8209-98d72ee781fc"},
+                {"foil": false,  "id":"e964f026-9cbf-4fa2-acdc-60d19b88f183"},
+                {"foil": false,  "id":"1247a5fa-b50a-4ab1-96ca-dbeb45bd0b56"},
+                {"foil": false,  "id":"4b9b16b3-1cbd-4b63-85b2-e4053dfc1e93"},
+				{"foil": false,  "id":"10e1030e-2b95-4807-9111-e495a2fc8813"}]
         },
 		"uncommons":{
             "head": "Uncommons",
             "cards": [
-                {"foil": false,  "id":""},
-                {"foil": false,  "id":""},
-                {"foil": false,  "id":""}]
+                {"foil": false,  "id":"36dafcd6-ce4e-4a27-bd8c-fa1a3bffc99e"},
+                {"foil": false,  "id":"44420f52-2ed8-4f81-93e4-5decc77bed01"},
+                {"foil": false,  "id":"8bab3f8f-cb06-466d-a35d-0b5e1a2b524c"}]
         },
         "focusCards":[
             {
                 "head": "Rare / Mytic Rare Card",
-                "card": {"foil": false, "id":"0ff7858d-f18d-4e5a-9467-ebef3ef53ac1"}
+                "card": {"foil": false, "id":"0a281d2c-20b9-4887-a924-9be6c07b7629"}
             },
             {
                 "head": "Land Card",
-                "card": {"foil": false, "id":"f67fd04f-05da-4418-97de-abeb7346cc69"}
+                "card": {"foil": false, "id":"8c13cafb-3078-4856-a5b0-c38aace8a34a"}
             },
             {
                 "head": "Token",
-                "card": {"foil": false, "id":"00841e4b-0995-4fb5-93d6-e177beba4934"}
+                "card": {"foil": false, "id":"3dfaedeb-f8ec-4f0e-b243-c850770a86f2"}
             }
         ]
     }
