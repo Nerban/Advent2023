@@ -619,6 +619,10 @@ video {
   aspect-ratio: 1 / 1;
 }
 
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
 .aspect-\[88\/63\] {
   aspect-ratio: 88/63;
 }
@@ -670,12 +674,20 @@ video {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .grid-cols-9 {
   grid-template-columns: repeat(9, minmax(0, 1fr));
 }
 
 .grid-cols-8 {
   grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
 }
 
 .grid-rows-2 {
@@ -801,6 +813,10 @@ video {
   background-image: url(../images/art/art16.png);
 }
 
+.bg-\[url\(\.\.\/images\/art\/art17\.png\)\] {
+  background-image: url(../images/art/art17.png);
+}
+
 .bg-\[url\(\.\.\/images\/art\/art2\.png\)\] {
   background-image: url(../images/art/art2.png);
 }
@@ -831,10 +847,6 @@ video {
 
 .bg-\[url\(\.\.\/images\/art\/art9\.png\)\] {
   background-image: url(../images/art/art9.png);
-}
-
-.bg-\[url\(\.\.\/images\/art\/art17\.png\)\] {
-  background-image: url(../images/art/art17.png);
 }
 
 .from-yellow-600\/30 {
@@ -871,19 +883,24 @@ video {
   padding: 1.25rem;
 }
 
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
-.px-24 {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .pb-1 {
@@ -1078,6 +1095,10 @@ video {
   background-image: url(../images/art/art15.png);
 }
 
+.hover\:bg-\[url\(\.\.\/images\/art\/art16\.png\)\]:hover {
+  background-image: url(../images/art/art16.png);
+}
+
 .hover\:bg-\[url\(\.\.\/images\/art\/art2\.png\)\]:hover {
   background-image: url(../images/art/art2.png);
 }
@@ -1112,10 +1133,6 @@ video {
 
 .hover\:bg-\[url\(\.\.\/images\/theme\.jpg\)\]:hover {
   background-image: url(../images/theme.jpg);
-}
-
-.hover\:bg-\[url\(\.\.\/images\/art\/art16\.png\)\]:hover {
-  background-image: url(../images/art/art16.png);
 }
 
 .hover\:text-transparent:hover {
