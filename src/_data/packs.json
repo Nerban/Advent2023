@@ -19,29 +19,21 @@
             "cards": [
                 {"foil": false,  "id":"7c219861-f808-456f-b551-37512764062d"},
                 {"foil": false,  "id":"85ad358d-a520-4d57-82b0-d2297da1fbde"},
-                {"foil": false,  "id":"dea3d0f4-76f5-416f-93ba-8b003b967816"},
-                {"foil": false,  "id":"3c068b2e-17cc-4fb8-bd79-b775a4713d74"},
-                {"foil": false,  "id":""},
-                {"foil": false,  "id":""},
-                {"foil": false,  "id":""},
-                {"foil": false,  "id":""}]
+                {"foil": false,  "id":"3d9abaec-af72-4399-b162-5e62e7487242"}]
         },
         "focusCards":[
+
             {
-                "head": "Wild Card",
-                "card": {"foil": false, "id":"daf51a76-7a57-4462-ae18-a19e817e49e5"}
-            },
-            {
-                "head": "Rare Card",
+                "head": "Rare / Mytic Rare Card",
                 "card": {"foil": false, "id":"86ff73c7-428c-469c-b564-6aa9f4eeca14"}
             },
             {
-                "head": "Cave Card",
+                "head": "Land Card",
                 "card": {"foil": false, "id":"a942939a-c06e-4b90-a404-ae5acfffcff9"}
             },
             {
                 "head": "Token",
-                "card": {"foil": true, "id":"64839118-09d2-4645-9d3c-f80755ac781f"}
+                "card": {"foil": false, "id":"64839118-09d2-4645-9d3c-f80755ac781f"}
             }
         ]
     },
@@ -62,31 +54,60 @@
 		"uncommons":{
             "head": "Uncommons",
             "cards": [
-                {"foil": false,  "id":"0c7ba382-18c4-4833-b3d2-bd469ae2ad77"},
-                {"foil": false,  "id":"741a7439-965d-49f2-b43e-053f29196e6b"},
-                {"foil": false,  "id":"dea3d0f4-76f5-416f-93ba-8b003b967816"},
-                {"foil": false,  "id":"3c068b2e-17cc-4fb8-bd79-b775a4713d74"},
+                {"foil": false,  "id":"a86f3cb2-7822-4c19-bd84-cea177e5b6e9"},
+                {"foil": false,  "id":"54f82c95-8bc1-4df9-9120-86ffc059c7dd"},
+                {"foil": false,  "id":"3d715e9f-223d-462e-8ce3-eebbaf1cd021"},
+                {"foil": false,  "id":"194b7899-6b44-4ecc-8ddc-ec24304eb14c"}]
+        },
+        "focusCards":[
+            {
+                "head": "Rare / Mytic Rare Card",
+                "card": {"foil": false, "id":"0ff7858d-f18d-4e5a-9467-ebef3ef53ac1"}
+            },
+            {
+                "head": "Land Card",
+                "card": {"foil": false, "id":"f67fd04f-05da-4418-97de-abeb7346cc69"}
+            },
+            {
+                "head": "Token",
+                "card": {"foil": false, "id":"00841e4b-0995-4fb5-93d6-e177beba4934"}
+            }
+        ]
+    },
+	    "3":{
+        "commons":{
+            "head": "Commons",
+            "cards": [
+                {"foil": false,  "id":"9048cd9d-df3f-4705-a5f4-e5b09760c631"},
                 {"foil": false,  "id":""},
+                {"foil": false,  "id":""},
+                {"foil": false,  "id":""},
+                {"foil": false,  "id":""},
+                {"foil": false,  "id":""},
+                {"foil": false,  "id":""},
+                {"foil": false,  "id":""},
+                {"foil": false,  "id":""},
+				{"foil": false,  "id":""}]
+        },
+		"uncommons":{
+            "head": "Uncommons",
+            "cards": [
                 {"foil": false,  "id":""},
                 {"foil": false,  "id":""},
                 {"foil": false,  "id":""}]
         },
         "focusCards":[
             {
-                "head": "Wild Card",
-                "card": {"foil": false, "id":"daf51a76-7a57-4462-ae18-a19e817e49e5"}
-            },
-            {
-                "head": "Rare Card",
+                "head": "Rare / Mytic Rare Card",
                 "card": {"foil": false, "id":"0ff7858d-f18d-4e5a-9467-ebef3ef53ac1"}
             },
             {
-                "head": "Cave Card",
+                "head": "Land Card",
                 "card": {"foil": false, "id":"f67fd04f-05da-4418-97de-abeb7346cc69"}
             },
             {
                 "head": "Token",
-                "card": {"foil": true, "id":"00841e4b-0995-4fb5-93d6-e177beba4934"}
+                "card": {"foil": false, "id":"00841e4b-0995-4fb5-93d6-e177beba4934"}
             }
         ]
     }
