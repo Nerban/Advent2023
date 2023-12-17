@@ -2,7 +2,7 @@
 {%if config.useArtwork%} 
 data-background-image="images/art/art{{key}}.png" 
 {% else %}
-data-background-image="{{"../images/"+config.themeImage | url }}" 
+data-background-image="images/{{config.themeImage}}"
 {%endif%}
  data-background-opacity="0.5">
 
