@@ -800,6 +800,10 @@ video {
   background-image: url(../images/art/art20.png);
 }
 
+.bg-\[url\(\.\.\/images\/art\/art21\.png\)\] {
+  background-image: url(../images/art/art21.png);
+}
+
 .bg-\[url\(\.\.\/images\/art\/art3\.png\)\] {
   background-image: url(../images/art/art3.png);
 }
@@ -828,8 +832,8 @@ video {
   background-image: url(../images/art/art9.png);
 }
 
-.bg-\[url\(\.\.\/images\/art\/art21\.png\)\] {
-  background-image: url(../images/art/art21.png);
+.bg-\[url\(\.\.\/images\/art\/art22\.png\)\] {
+  background-image: url(../images/art/art22.png);
 }
 
 .bg-cover {
@@ -1034,6 +1038,10 @@ video {
   background-image: url(../images/art/art2.png);
 }
 
+.hover\:bg-\[url\(\.\.\/images\/art\/art20\.png\)\]:hover {
+  background-image: url(../images/art/art20.png);
+}
+
 .hover\:bg-\[url\(\.\.\/images\/art\/art3\.png\)\]:hover {
   background-image: url(../images/art/art3.png);
 }
@@ -1066,8 +1074,8 @@ video {
   background-image: url(../images/theme.jpg);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art20\.png\)\]:hover {
-  background-image: url(../images/art/art20.png);
+.hover\:bg-\[url\(\.\.\/images\/art\/art21\.png\)\]:hover {
+  background-image: url(../images/art/art21.png);
 }
 
 .hover\:text-blue-200:hover {
