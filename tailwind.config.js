@@ -53,6 +53,11 @@ module.exports = {
       aspectRatio: {
         'card': '63.5 / 88.9',
       },
+      backgroundImage: {
+        'radial-gradient-yellow': 'radial-gradient(circle, rgba(201,85,0,0.9) 3%, rgba(255,173,0,0.4) 30%, rgba(255,255,255,0) 65%);',
+        'radial-gradient-blue':'radial-gradient(circle, rgba(0,10,130,1) 0%, rgba(0,32,136,0.8) 2%, rgba(0,43,133,0.6) 15%, rgba(0,69,143,0.3) 30%, rgba(255,255,255,0) 65%);',
+      },
+
     },
   },
   plugins: [Myclass],
