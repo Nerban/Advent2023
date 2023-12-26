@@ -1077,7 +1077,7 @@
         "commons":{
             "head": "Commons",
             "cards": [
-                {"foil": false,  "id":"66aefbfc-3f67-443d-8ec4-cc9beafb64ee"},
+                {"foil": false, "new":false, "id":"66aefbfc-3f67-443d-8ec4-cc9beafb64ee"},
                 {"foil": false,  "id":"9184bc57-0a16-4abf-a13a-6a03a175c28a"},
                 {"foil": false,  "id":"3c7ca435-aa84-4d35-80db-d1c74b878b12"},
                 {"foil": false,  "id":"7e14dfd2-5805-46ef-bd19-dab7ac23fbce"},
