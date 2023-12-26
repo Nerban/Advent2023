@@ -851,6 +851,22 @@ video {
   background-image: url(../images/art/art9.png);
 }
 
+.bg-\[url\(\.\.\/images\/art\/art25\.png\)\] {
+  background-image: url(../images/art/art25.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art26\.png\)\] {
+  background-image: url(../images/art/art26.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art27\.png\)\] {
+  background-image: url(../images/art/art27.png);
+}
+
+.bg-\[url\(\.\.\/images\/art\/art28\.png\)\] {
+  background-image: url(../images/art/art28.png);
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -1095,6 +1111,22 @@ video {
 
 .hover\:bg-\[url\(\.\.\/images\/theme\.jpg\)\]:hover {
   background-image: url(../images/theme.jpg);
+}
+
+.hover\:bg-\[url\(\.\.\/images\/art\/art24\.png\)\]:hover {
+  background-image: url(../images/art/art24.png);
+}
+
+.hover\:bg-\[url\(\.\.\/images\/art\/art25\.png\)\]:hover {
+  background-image: url(../images/art/art25.png);
+}
+
+.hover\:bg-\[url\(\.\.\/images\/art\/art26\.png\)\]:hover {
+  background-image: url(../images/art/art26.png);
+}
+
+.hover\:bg-\[url\(\.\.\/images\/art\/art27\.png\)\]:hover {
+  background-image: url(../images/art/art27.png);
 }
 
 .hover\:text-blue-200:hover {
