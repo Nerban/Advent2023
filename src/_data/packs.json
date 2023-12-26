@@ -4,7 +4,7 @@
         "commons":{
             "head": "Commons",
             "cards": [
-                {"foil": false,  "id":"33cd4f63-3484-4cee-8603-1f89cabee6c3"},
+                {"foil": false, "new":true,  "id":"33cd4f63-3484-4cee-8603-1f89cabee6c3"},
                 {"foil": false,  "id":"4a63d530-27c3-4cd7-ac37-c62b5a1afbc1"},
                 {"foil": false,  "id":"3934d535-740d-471a-bbf1-c3b26b1cd596"},
                 {"foil": false,  "id":"be2ef728-a2c7-45ee-8594-372ed135b482"},
