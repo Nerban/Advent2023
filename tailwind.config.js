@@ -49,7 +49,11 @@ module.exports = {
       blue: colors.blue,
       slate: colors.stone,
     },
-    extend: {},
+    extend: {
+      aspectRatio: {
+        'card': '63.5 / 88.9',
+      },
+    },
   },
   plugins: [Myclass],
   purge: [ 'dist/**/*.html' ],
