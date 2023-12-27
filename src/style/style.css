@@ -939,6 +939,10 @@ video {
   background-image: url(../images/art/art28.png);
 }
 
+.bg-\[url\(\.\.\/images\/art\/art29\.png\)\] {
+  background-image: url(../images/art/art29.png);
+}
+
 .bg-\[url\(\.\.\/images\/art\/art3\.png\)\] {
   background-image: url(../images/art/art3.png);
 }
@@ -969,6 +973,10 @@ video {
 
 .bg-radial-gradient-blue {
   background-image: radial-gradient(circle, rgba(0,10,130,1) 0%, rgba(0,32,136,0.8) 2%, rgba(0,43,133,0.6) 15%, rgba(0,69,143,0.3) 30%, rgba(255,255,255,0) 65%);;
+}
+
+.bg-\[url\(\.\.\/images\/art\/art30\.png\)\] {
+  background-image: url(../images/art/art30.png);
 }
 
 .bg-cover {
