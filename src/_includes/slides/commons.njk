@@ -9,7 +9,10 @@
                 {%for card in pack.commons.cards%}
                 <div class="grid place-items-center r-stack shiny">
                     <img data-fragment-index="{{loop.index + 1}}" class="fragment fade-out shadow-xl aspect-card opacity-100 rounded-xl" data-src="images/card_back.jpg">
-                    <div id ="{{key + "-com" + "_" + loop.index}}" scry="{{card.id}}"  class="fragment fade-down aspect-card" data-fragment-index="{{loop.index + 1}}">
+                    <div 
+                    id ="{{key + "-com" + "_" + loop.index}}" 
+                    scry="{{card.id}}"  
+                    class="fragment fade-down aspect-card" data-fragment-index="{{loop.index + 1}}">
                         
                         <div class="FlipButton 
                         bg-gray-900 cursor-pointer drop-shadow-sm 
@@ -21,11 +24,11 @@
                          {%if card.new %}
                             <div 
                             class="newBadge drop-shadow-lg  animate-bounce absolute font-serif font-semibold  z-20 
-                            text-xs p-1 border   bg-gray-800/0 text-white  rounded-md -top-4 -left-2
+                            text-xs p-1  bg-gray-800/0 text-white  rounded-md -top-1 -left-2
                             ">	
                             <span class="absolute z-10 grayscale animate-ping">&#10024;</span>
-                            <span class="absolute z-20 grayscale">&#10024;</span> 
-                            <span class="pl-5">new!</span>
+                            <span class="absolute z-20 drop-shadow-sm grayscale">&#10024;</span> 
+                            
                             </div>
                         {% endif %}
                         
