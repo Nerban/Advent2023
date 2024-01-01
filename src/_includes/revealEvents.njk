@@ -1,8 +1,6 @@
 <script>
   Reveal.addEventListener( 'fragmentshown', function( event ) { 
 
-      
-
       //Artimages
       if(event.fragment.parentNode.id.includes("art")){
         buildFancyArt(event.fragment.parentNode.id, event.fragment.parentNode.getAttribute("srcy"))

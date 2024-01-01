@@ -19,7 +19,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-main-font: Lato, sans-serif;
   --r-main-font-size: 40px;
   --r-main-color: #93a1a1;
-  --r-block-margin: 20px;
+  --r-block-margin: 0px;
   --r-heading-margin: 0 0 20px 0;
   --r-heading-font: League Gothic, Impact, sans-serif;
   --r-heading-color: #eee8d5;
@@ -132,11 +132,13 @@ section.has-light-background, section.has-light-background h1, section.has-light
 }
 
 /* Ensure certain elements are never larger than the slide itself */
-.reveal img,
+.reveal img{
+	max-width: 100%;
+}
 .reveal video,
 .reveal iframe {
-  max-width: 95%;
-  max-height: 95%;
+ max-width: 95%;
+ max-height: 95%;
 }
 
 .reveal strong,
