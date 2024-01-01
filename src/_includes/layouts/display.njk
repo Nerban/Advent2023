@@ -1,14 +1,16 @@
 <!doctype html>
 <header>
-  <link rel="stylesheet" href="{{ 'assets/reveal/reveal.css' | url }}" />
-  <link rel="stylesheet" href="{{ 'assets/reveal/theme/magic.css' | url }}" />
+<link rel="stylesheet" href="{{ '../assets/reveal/reveal.css' | url }}" />
+  <link rel="stylesheet" href="{{ '../assets/reveal/theme/magic.css' | url }}" />
 
-  <link rel="stylesheet" href="style/style.css" />
   <link href="//cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css" rel="stylesheet" type="text/css" /> 
+
+  <link rel="stylesheet" href="/style/style.css" />
+
 </header>
 <title>MTG Advent 2023</title>
 
-{%include "custom.njk"%}
+{%include "scripts/custom.njk"%}
 
 <body>
   <div class="reveal">
@@ -22,12 +24,12 @@
       
     </div>
   </div>
-<div class="card hidden"></div>
+<div class="card w-11/12 hidden"></div>
 
   
-  <script src="{{ 'assets/reveal/reveal.js' | url }}"></script>
-  <script src="{{ 'assets/reveal/plugin/highlight/highlight.js' | url }}"></script>
-  <script src="{{ 'assets/reveal/plugin/notes/notes.js' | url }}"></script>
+  <script src="{{ '/assets/reveal/reveal.js' | url }}"></script>
+  <script src="{{ '/assets/reveal/plugin/highlight/highlight.js' | url }}"></script>
+  <script src="{{ '/assets/reveal/plugin/notes/notes.js' | url }}"></script>
   <script>
     Reveal.initialize({
       controls: true,
@@ -39,6 +41,6 @@
     
     
   </script>
-  {%include "revealEvents.njk"%}
+  {%include "scripts/revealEvents.njk"%}
 
 </body>

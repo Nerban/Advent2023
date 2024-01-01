@@ -48,6 +48,10 @@ module.exports = {
       yellow: colors.amber,
       blue: colors.blue,
       slate: colors.stone,
+      fuchsia: colors.fuchsia,
+      pink:colors.pink,
+      red:colors.red,
+      rose:colors.rose,
     },
     extend: {
       aspectRatio: {

@@ -1,0 +1,18 @@
+<!doctype html>
+<header>
+  <link rel="stylesheet" href="style/style.css" />
+  <link href="//cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css" rel="stylesheet" type="text/css" /> 
+</header>
+<title>Nerbans MTG Corner</title>
+<body class="bg-emerald-950">
+
+  {% include "widgets/navigation.njk" %}
+
+  {%for item in booster%}
+    <a class="text-white font-bold my-5"
+    href="packs/{{ item.id | slugify}}">{{item.name}}</a>
+  {%endfor%}
+
+  {% include "widgets/hero.njk" %}
+  
+</body>
