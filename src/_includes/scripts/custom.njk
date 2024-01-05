@@ -85,8 +85,6 @@ function set3D_Card(id, active){
 }
 
 
-
-
     const populateFoilCard = async (id) => {
       
       const Target = document.getElementById(id);
@@ -218,51 +216,48 @@ function set3D_Card(id, active){
 
   }
 
-  .rotated {
-    transform: rotate(90deg); /* Equal to rotateZ(45deg) */
-  }
 
   @-webkit-keyframes moveafter {
-  0% {
-  top:100%;
-  left:100%;
-  }
-  50% {
-  top:-100%;
-  left:-100%;
-  }
-  100% {
-  top:-200%;
-  left:-200%;
-  }
-  }
-  @-moz-keyframes moveafter {
-  0% {
-  top:100%;
-  left:100%;
-  }
-  50% {
-  top:-100%;
-  left:-100%;
-  }
-  100% {
-  top:-100%;
-  left:-100%;
-  }
-  }
-  @keyframes moveafter {
-  0% {
-  top:100%;
-  left:100%;
-  }
-  50% {
-  top:-100%;
-  left:-100%;
-  }
-  100% {
-  top:-200%;
-  left:-200%;
-  }
+    0% {
+    top:100%;
+    left:100%;
+    }
+    50% {
+    top:-100%;
+    left:-100%;
+    }
+    100% {
+    top:-200%;
+    left:-200%;
+    }
+    }
+    @-moz-keyframes moveafter {
+    0% {
+    top:100%;
+    left:100%;
+    }
+    50% {
+    top:-100%;
+    left:-100%;
+    }
+    100% {
+    top:-100%;
+    left:-100%;
+    }
+    }
+    @keyframes moveafter {
+    0% {
+    top:100%;
+    left:100%;
+    }
+    50% {
+    top:-100%;
+    left:-100%;
+    }
+    100% {
+    top:-200%;
+    left:-200%;
+    }
   }
 
       .fragment.blur {
