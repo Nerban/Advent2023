@@ -267,6 +267,35 @@ function set3D_Card(id, active){
         filter: none;
       }
 
+      .fragment.cardBack{
+        filter: none;
+        .hide{
+          transition: opacity 500ms;
+          transition-timing-function: ease-in-out;
+          opacity: 1;
+        }  
+     
+      }
+      .fragment.cardBack.visible{
+        transform: rotateY(180deg) translateZ(0) perspective(1px);
+        transform-style: preserve-3d;
+        transition-duration: 250ms;
+        transition-timing-function: ease-in-out;
+
+        filter: none;
+         .hide{
+          transition: opacity 200ms;
+          opacity: 0;
+        }  
+      }
+      .front,.back {
+        backface-visibility: hidden;
+      }
+
+      .back {
+        transform: rotateY(180deg) ;
+      }
+
       * {
   box-sizing: border-box;
   }

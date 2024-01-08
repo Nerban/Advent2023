@@ -1,6 +1,4 @@
 {
     "home":"/",
-    "collection":"/collection",
-    "advent":"/advent",
-    "about":"/about"
+    "advent":"/advent"
 }
