@@ -1,115 +1,39 @@
 [
     {
-        "name":"Advent Set Display ",
+        "name":"Streets of New Capenna",
         "set":"snc",
-        "tags":["booster","nph", "set"],
-        "id":"nph-001",
+        "tags":["booster","snc","set-booster"],
+        "id":"snc-01",
         "art":
         {   
-            "foil":true,
+            "foil": false,
             "rotate": true,
-            "id":"066139cc-2b4b-4ae7-9da5-a2524a55c218",
-            "image":"art2"
+            "nr":"2",
+            "new":true
         },
         "multiple":[
             {
                 "head": "Commons",
                 "cards": [
-                    {"foil": true, "new":true, "id":"33cd4f63-3484-4cee-8603-1f89cabee6c3"},
-                    {"foil": false, "new":true, "id":"4a63d530-27c3-4cd7-ac37-c62b5a1afbc1"},
-                    {"foil": false, "new":true, "id":"3934d535-740d-471a-bbf1-c3b26b1cd596"},
-                    {"foil": false, "new":true, "id":"be2ef728-a2c7-45ee-8594-372ed135b482"},
-                    {"foil": false, "new":true, "id":"efd6f04e-e83d-4580-ae3f-583ada848868"},
-                    {"foil": false, "new":true, "id":"73e92389-4bd2-492e-b4d6-d7cb6baedc41"},
-                    {"foil": false, "new":true, "id":"92f5b177-b0c6-4573-b860-f75dad1941bd"},
-                    {"foil": false, "new":true, "id":"50180fda-6d67-41e9-8b2b-2e7c5876b8ab"}]
-            }
-        ]
-        
-    },
-    {
-        "name":"Advent Set Display ",
-        "set":"nph",
-        "tags":["booster","mom", "set"],
-        "id":"nph-002",
-        "art":
-        {   
-            "foil":true,
-            "rotate": true,
-            "id":"066139cc-2b4b-4ae7-9da5-a2524a55c218",
-            "image":"art2"
-        }
-        
-    },
-
-    {
-        "name":"Advent Set Display ",
-        "set":"mom",
-        "tags":["booster","mom", "set"],
-        "id":"mom-003",
-        "art":
-        {   
-            "foil":true,
-            "rotate": false,
-            "id":"066139cc-2b4b-4ae7-9da5-a2524a55c218",
-            "image":"art1"
-        },
-        "multiple":[
+                    {"foil": true,  "nr":"265", "new":true},
+                    {"foil": false, "nr":"37" , "new":true},
+                    {"foil": false, "nr":"243", "new":true},
+                    {"foil": false, "nr":"73" , "new":true},
+                    {"foil": false, "nr":"90" , "new":true},
+                    {"foil": false, "nr":"103", "new":true},
+                    {"foil": false, "nr":"127", "new":true},
+                    {"foil": false, "nr":"17" , "new":true}]
+            },
             {
-                "head": "Commons",
+                "head": "other",
                 "cards": [
-                    {"foil": true, "new":true, "id":"33cd4f63-3484-4cee-8603-1f89cabee6c3"},
-                    {"foil": false, "new":false, "id":"4a63d530-27c3-4cd7-ac37-c62b5a1afbc1"},
-                    {"foil": false, "new":true, "id":"3934d535-740d-471a-bbf1-c3b26b1cd596"},
-                    {"foil": false, "new":true, "id":"be2ef728-a2c7-45ee-8594-372ed135b482"},
-                    {"foil": false, "new":true, "id":"efd6f04e-e83d-4580-ae3f-583ada848868"},
-                    {"foil": false, "new":true, "id":"73e92389-4bd2-492e-b4d6-d7cb6baedc41"},
-                    {"foil": false, "new":true, "id":"92f5b177-b0c6-4573-b860-f75dad1941bd"},
-                    {"foil": false, "new":true, "id":"50180fda-6d67-41e9-8b2b-2e7c5876b8ab"}]
+                    {"foil": false, "nr":"352", "new":true},
+                    {"foil": false, "nr":"6"  , "set":"ncc", "new":true },
+                    {"foil": false, "nr":"209", "new":true},
+                    {"foil": true,  "nr":"205", "new":true}
+                ]
             }
         ]
-        
-    },
-    {
-        "name":"Advent Set Display ",
-        "set":"mom",
-        "tags":["booster","mom", "set"],
-        "id":"mom-004",
-        "art":
-        {   
-            "foil":true,
-            "rotate": true,
-            "id":"066139cc-2b4b-4ae7-9da5-a2524a55c218",
-            "image":"art2"
-        }
-        
-    },
-    {
-        "name":"Advent Set Display ",
-        "set":"mom",
-        "tags":["booster","mom", "set"],
-        "id":"mom-005",
-        "art":
-        {   
-            "foil":true,
-            "rotate": true,
-            "id":"066139cc-2b4b-4ae7-9da5-a2524a55c218",
-            "image":"art3"
-        }
-        
-    },
-    {
-        "name":"Advent Set Display ",
-        "set":"mom",
-        "tags":["booster","mom", "set"],
-        "id":"mom-006",
-        "art":
-        {   
-            "foil":true,
-            "rotate": true,
-            "id":"066139cc-2b4b-4ae7-9da5-a2524a55c218",
-            "image":"art3"
-        }
         
     }
 ]

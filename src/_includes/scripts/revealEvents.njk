@@ -3,14 +3,18 @@
 
       //Artimages
       if(event.fragment.parentNode.id.includes("art")){
-        buildFancyArt(event.fragment.parentNode.id, event.fragment.parentNode.getAttribute("srcy"))
-        set3D_Card(event.fragment.parentNode.id, true)
+        //buildFancyArt(event.fragment.parentNode.id, event.fragment.parentNode.getAttribute("srcy"))
+        buildArt(event.fragment.parentNode.id)
+        //set3D_Card(event.fragment.parentNode.id, true)
+      }else{
+        populateCard(event.fragment.id);
       }
     });
 
   Reveal.addEventListener( 'fragmenthidden', function( event ) { 
-      set3D_Card(event.fragment.parentNode.id, false)
-
+    if(event.fragment.parentNode.id.includes("art")){
+      //set3D_Card(event.fragment.parentNode.id, false)
+    }
     });
 
 
