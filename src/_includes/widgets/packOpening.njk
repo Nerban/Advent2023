@@ -56,46 +56,67 @@
             <h4 class="basis-1/4">
                 {{i.head}}
             </h4>
-            <hr class="mx-5 basis-1/4">
-			<div class="w-full mt-5  bg-red-500 justify-evenly flex flex-wrap gap-4 mb-4 my-auto basis-1/2">
+            <hr class="mx-5 mb-2">
+			<div class="w-full px-12 justify-evenly flex flex-wrap mb-4 my-auto basis-1/2">
 
                 {%for card in i.cards%}
 
-                <div class="w-1/5 aspect-card r-stack fragment custom cardBack" 
+
+
+                <div 
+                class="
+                {%if i.cards|length < 4 %}  w-1/2 p-8
+                {% else %}w-1/4 p-2
+                {%endif%}  aspect-card r-stack fragment custom revealCard" 
                 data-fragment-index="{{loop.index + 1}}"
                 id="{{pack.name|slugify +"-"+ pack.set + "_" +card.nr}}"
                 nr="{{card.nr}}"
                 set="{{ card.set | default(pack.set)}}"> 
 
                     <div class="front w-full aspect-card">
-                        <img src="/images/card_back.jpg" class="rounded-xl hide">
+                        <img src="/images/card_back.jpg" 
+                        class="
+                        {%if i.cards|length < 4 %} rounded-3xl
+                        {% else %} rounded-xl
+                        {%endif%} hide">
                     </div>
 
-                    <div class="back blur-none aspect-card w-full r-stack">
+
+                    <div class="back aspect-card w-full r-stack relative 
+hover:z-50 hover:shadow-xl hover:rotate-6 duration-700
+                        {%if i.cards|length < 4 %} rounded-3xl hover:scale-110
+                        {% else %} rounded-xl hover:scale-125
+                        {%endif%}">
+
                         <div class="FlipButton 
                             bg-gray-900 cursor-pointer drop-shadow-sm 
                             hover:text-rose-200 text-emerald-200 text-md rounded-lg 
                             rounded-tr-3xl z-10 font-bold px-3 bg-opacity-50 absolute -bottom-2 -left-2"
 						    onclick="toggleImg('{{ key + '-com' + '_' + loop.index }}')" >&#10227;
                         </div>
-                        {%if card.foil%}
-                            <div class="w-full  rounded-xl aspect-card foil-image"></div>
-                        {%endif%}
+
 
                          {%if card.new %}
                             <div 
-                            class="newBadge drop-shadow-lg  animate-bounce absolute font-serif font-semibold  z-20 
-                            text-xs p-1  bg-gray-800/0 text-white  rounded-md -top-1 -left-2">	
-                                <span class="absolute z-10 grayscale animate-ping">&#10024;</span>
-                                <span class="absolute z-20 drop-shadow-sm grayscale">&#10024;</span>       
+                            class=" r-stack 
+                            {%if i.cards|length < 4 %} text-6xl -top-4 -left-6
+                            {% else %} text-2xl -top-1 -left-2 {%endif%}
+                            newBadge drop-shadow-lg  animate-bounce absolute font-serif font-semibold z-20 
+                            p-1 bg-gray-800/0 text-rose-500  rounded-md ">	
+                                <span class="z-10 animate-ping">&#11214;</span>
+                                <span class="z-20 drop-shadow-sm ">&#11214;</span>    
                             </div>
                         {% endif %}
-
-                        <div class="w-full aspect-card rounded-xl blur-none">
-                        <img class="FrontIMG w-full stretch filter-none blur-none rounded-xl" >
+                        <a target="_blank" href="#" class="r-stack ">
+                                                {%if card.foil%}
+                            <div class="w-full z-0  rounded-xl aspect-card foil-image"></div>
+                        {%endif%}
+                        <div class="w-full aspect-card rounded-xl">
+                        
+                            <img class="FrontIMG w-full {%if i.cards|length < 4 %}rounded-3xl{% else %}rounded-xl {%endif%}" >
                         
                         </div>
-
+                        </a>
                     </div>
                 </div>
                 <!--

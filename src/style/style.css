@@ -560,8 +560,16 @@ video {
   left: -0.5rem;
 }
 
+.-left-6 {
+  left: -1.5rem;
+}
+
 .-top-1 {
   top: -0.25rem;
+}
+
+.-top-4 {
+  top: -1rem;
 }
 
 .-top-6 {
@@ -618,11 +626,6 @@ video {
   margin-right: auto;
 }
 
-.my-1 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -633,12 +636,20 @@ video {
   margin-bottom: auto;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
 
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .mt-10 {
@@ -730,10 +741,6 @@ video {
   width: 25%;
 }
 
-.w-1\/5 {
-  width: 20%;
-}
-
 .w-1\/6 {
   width: 16.666667%;
 }
@@ -782,6 +789,12 @@ video {
 
 .rotate-90 {
   --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-100 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -984,11 +997,6 @@ video {
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -1188,12 +1196,25 @@ video {
   padding: 3rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .p-4 {
   padding: 1rem;
 }
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .px-2 {
@@ -1231,11 +1252,6 @@ video {
   padding-bottom: 2rem;
 }
 
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -1263,6 +1279,11 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .text-8xl {
@@ -1299,6 +1320,11 @@ video {
 .text-emerald-200 {
   --tw-text-opacity: 1;
   color: rgb(167 243 208 / var(--tw-text-opacity));
+}
+
+.text-emerald-400 {
+  --tw-text-opacity: 1;
+  color: rgb(52 211 153 / var(--tw-text-opacity));
 }
 
 .text-emerald-500 {
@@ -1433,12 +1459,28 @@ video {
   transition-duration: 150ms;
 }
 
+.delay-75 {
+  transition-delay: 75ms;
+}
+
 .duration-100 {
   transition-duration: 100ms;
 }
 
 .duration-200 {
   transition-duration: 200ms;
+}
+
+.duration-150 {
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
 }
 
 .card-flip-transform {
@@ -1474,6 +1516,10 @@ video {
   line-height: 1.75rem;
 }
 
+.hover\:z-50:hover {
+  z-index: 50;
+}
+
 .hover\:rotate-6:hover {
   --tw-rotate: 6deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1491,100 +1537,106 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art1\.png\)\]:hover {
-  background-image: url(../images/art/art1.png);
+.hover\:scale-125:hover {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art10\.png\)\]:hover {
-  background-image: url(../images/art/art10.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art1\.png\)\]:hover {
+  background-image: url(../images/mom/art/art1.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art11\.png\)\]:hover {
-  background-image: url(../images/art/art11.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art10\.png\)\]:hover {
+  background-image: url(../images/mom/art/art10.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art12\.png\)\]:hover {
-  background-image: url(../images/art/art12.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art11\.png\)\]:hover {
+  background-image: url(../images/mom/art/art11.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art13\.png\)\]:hover {
-  background-image: url(../images/art/art13.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art12\.png\)\]:hover {
+  background-image: url(../images/mom/art/art12.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art14\.png\)\]:hover {
-  background-image: url(../images/art/art14.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art13\.png\)\]:hover {
+  background-image: url(../images/mom/art/art13.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art15\.png\)\]:hover {
-  background-image: url(../images/art/art15.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art14\.png\)\]:hover {
+  background-image: url(../images/mom/art/art14.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art16\.png\)\]:hover {
-  background-image: url(../images/art/art16.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art15\.png\)\]:hover {
+  background-image: url(../images/mom/art/art15.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art17\.png\)\]:hover {
-  background-image: url(../images/art/art17.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art16\.png\)\]:hover {
+  background-image: url(../images/mom/art/art16.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art18\.png\)\]:hover {
-  background-image: url(../images/art/art18.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art17\.png\)\]:hover {
+  background-image: url(../images/mom/art/art17.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art19\.png\)\]:hover {
-  background-image: url(../images/art/art19.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art18\.png\)\]:hover {
+  background-image: url(../images/mom/art/art18.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art2\.png\)\]:hover {
-  background-image: url(../images/art/art2.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art19\.png\)\]:hover {
+  background-image: url(../images/mom/art/art19.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art20\.png\)\]:hover {
-  background-image: url(../images/art/art20.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art2\.png\)\]:hover {
+  background-image: url(../images/mom/art/art2.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art21\.png\)\]:hover {
-  background-image: url(../images/art/art21.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art20\.png\)\]:hover {
+  background-image: url(../images/mom/art/art20.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art22\.png\)\]:hover {
-  background-image: url(../images/art/art22.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art21\.png\)\]:hover {
+  background-image: url(../images/mom/art/art21.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art23\.png\)\]:hover {
-  background-image: url(../images/art/art23.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art22\.png\)\]:hover {
+  background-image: url(../images/mom/art/art22.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art24\.png\)\]:hover {
-  background-image: url(../images/art/art24.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art23\.png\)\]:hover {
+  background-image: url(../images/mom/art/art23.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art3\.png\)\]:hover {
-  background-image: url(../images/art/art3.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art24\.png\)\]:hover {
+  background-image: url(../images/mom/art/art24.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art4\.png\)\]:hover {
-  background-image: url(../images/art/art4.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art3\.png\)\]:hover {
+  background-image: url(../images/mom/art/art3.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art5\.png\)\]:hover {
-  background-image: url(../images/art/art5.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art4\.png\)\]:hover {
+  background-image: url(../images/mom/art/art4.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art6\.png\)\]:hover {
-  background-image: url(../images/art/art6.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art5\.png\)\]:hover {
+  background-image: url(../images/mom/art/art5.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art7\.png\)\]:hover {
-  background-image: url(../images/art/art7.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art6\.png\)\]:hover {
+  background-image: url(../images/mom/art/art6.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art8\.png\)\]:hover {
-  background-image: url(../images/art/art8.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art7\.png\)\]:hover {
+  background-image: url(../images/mom/art/art7.png);
 }
 
-.hover\:bg-\[url\(\.\.\/images\/art\/art9\.png\)\]:hover {
-  background-image: url(../images/art/art9.png);
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art8\.png\)\]:hover {
+  background-image: url(../images/mom/art/art8.png);
+}
+
+.hover\:bg-\[url\(\.\.\/images\/mom\/art\/art9\.png\)\]:hover {
+  background-image: url(../images/mom/art/art9.png);
 }
 
 .hover\:bg-radial-gradient-yellow:hover {
@@ -1627,6 +1679,12 @@ video {
 .hover\:shadow-2xl:hover {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-xl:hover {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 

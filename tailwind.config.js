@@ -3,9 +3,7 @@ const plugin = require("tailwindcss/plugin");
 
 const Myclass = plugin(function ({ addUtilities }) {
   addUtilities({
-    ".my-rotate-y-180": {
-      transform: "rotateY(180deg)",
-    },
+
 
     ".card-flip-transform":{
       transform: "rotateY(180deg)",

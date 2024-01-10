@@ -91,6 +91,7 @@ function set3D_Card(id, active){
     const populateCard = async (id) => {
       
       const Target = document.getElementById(id);
+      var LINK = Target.getElementsByTagName("a")[0];
       const isFlip = Target.getElementsByClassName("FlipButton")[0];
       isFlip.style.display ='none';
 
@@ -100,46 +101,47 @@ function set3D_Card(id, active){
 
        const response = await fetch("https://api.scryfall.com/cards/"+set+"/"+nr,{method: "GET"});
       const myJson = await response.json();
-
+      LINK.href = myJson.scryfall_uri;
       FrontIMG.src = myJson.image_uris.large
-/*
-      var scry_id = Target.getAttribute("scry");
-      var SPAN = Target.getElementsByTagName("small")[1];
-      var IMG = Target.getElementsByClassName("card-image")[0];
-      var LINK = Target.getElementsByTagName("a")[0];
-      var DIV = Target.getElementsByTagName("div")[0];
-    
-      var imgUri;
-      const response = await fetch("https://api.scryfall.com/cards/"+scry_id,{method: "GET"});
-      const myJson = await response.json();
-        if(myJson.layout === "transform" || myJson.layout === "double_faced_token")
-        {
-            isFlip.style.display = "block";
-            imgUri = [myJson.card_faces[0].image_uris.large,myJson.card_faces[1].image_uris.large]
-            IMG.setAttribute("org", imgUri[0]);
-            IMG.setAttribute("trs", imgUri[1]);
+      /*
+        var scry_id = Target.getAttribute("scry");
+        var SPAN = Target.getElementsByTagName("small")[1];
+        var IMG = Target.getElementsByClassName("card-image")[0];
+        var LINK = Target.getElementsByTagName("a")[0];
+        var DIV = Target.getElementsByTagName("div")[0];
+      
+        var imgUri;
+        const response = await fetch("https://api.scryfall.com/cards/"+scry_id,{method: "GET"});
+        const myJson = await response.json();
+          if(myJson.layout === "transform" || myJson.layout === "double_faced_token")
+          {
+              isFlip.style.display = "block";
+              imgUri = [myJson.card_faces[0].image_uris.large,myJson.card_faces[1].image_uris.large]
+              IMG.setAttribute("org", imgUri[0]);
+              IMG.setAttribute("trs", imgUri[1]);
 
-            if(Target.id.split("_")[0].includes("foc")){
-              if(myJson.type_line.includes("Siege")){
-                IMG.setAttribute("battle", true)
-                IMG.parentNode.classList.add("card-flip-battle");
-                IMG.parentNode.parentNode.classList.add("-scale-x-100") 
-                }else{
-                  IMG.parentNode.classList.add("card-flip-transform");
+              if(Target.id.split("_")[0].includes("foc")){
+                if(myJson.type_line.includes("Siege")){
+                  IMG.setAttribute("battle", true)
+                  IMG.parentNode.classList.add("card-flip-battle");
                   IMG.parentNode.parentNode.classList.add("-scale-x-100") 
+                  }else{
+                    IMG.parentNode.classList.add("card-flip-transform");
+                    IMG.parentNode.parentNode.classList.add("-scale-x-100") 
+                  }
                 }
-              }
-            if(Target.id.split("_")[0].includes("com")){
-                  IMG.parentNode.classList.add("card-flip-transform");
-                  IMG.parentNode.parentNode.classList.add("-scale-x-100") 
-              }
-        }
-        else{imgUri = [myJson.image_uris.large]}
+              if(Target.id.split("_")[0].includes("com")){
+                    IMG.parentNode.classList.add("card-flip-transform");
+                    IMG.parentNode.parentNode.classList.add("-scale-x-100") 
+                }
+          }
+          else{imgUri = [myJson.image_uris.large]}
 
-      if(SPAN !== undefined){SPAN.innerHTML = myJson.name;}
-      IMG.src = imgUri[0];
+        if(SPAN !== undefined){SPAN.innerHTML = myJson.name;}
+        IMG.src = imgUri[0];
 
-      LINK.href = myJson.scryfall_uri;*/
+        LINK.href = myJson.scryfall_uri;
+      */
     }
 
     const populateFoilCard = async (id) => {
@@ -324,34 +326,62 @@ function set3D_Card(id, active){
         filter: none;
       }
 
+      .fragment.revealCard{
+        .front{
+          opacity: 1;
+        }
+        .back{
+          opacity:0;
+          transition: opacity 500ms;
+        }
+
+
+      }
+      .fragment.revealCard.visible{
+        
+        .front{
+          opacity: 0;
+        }
+        .back{
+          transition: opacity 800ms;
+          opacity: 1;
+        }
+      }
+
       .fragment.cardBack{
-        filter: none;
+        transform-style: preserve-3d;
         .hide{
+          will-change: transform;
           transition: opacity 500ms;
           transition-timing-function: ease-in-out;
           opacity: 1;
         }  
+              .front,.back {
+        backface-visibility: hidden;
+
+      }
+
+      .back {
+        will-change: transform;
+        transform: rotateY(180deg) ;
+      }
      
       }
       .fragment.cardBack.visible{
-        transform: rotateY(180deg) translateZ(0) perspective(1px);
+        transform: rotateY(180deg);
+        will-change: transform;
         transform-style: preserve-3d;
         transition-duration: 250ms;
         transition-timing-function: ease-in-out;
 
-        filter: none;
+
          .hide{
+
           transition: opacity 200ms;
           opacity: 0;
         }  
       }
-      .front,.back {
-        backface-visibility: hidden;
-      }
 
-      .back {
-        transform: rotateY(180deg) ;
-      }
 
       * {
   box-sizing: border-box;
