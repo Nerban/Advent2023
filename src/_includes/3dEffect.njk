@@ -1,0 +1,70 @@
+<script>
+let bounds;
+Reveal.addEventListener( 'fragmentshown', function( event ) { 
+      if(event.fragment.id === 'artbla'|| event.fragment.id === 'artbla') { 
+        rotateToMouse(event.fragment)
+
+        event.fragment.addEventListener('mouseenter', test1);
+
+        event.fragment.addEventListener('mouseleave', test2);
+      }
+  } );
+
+Reveal.addEventListener( 'fragmenthidden', function( event ) { 
+      if(event.fragment.id === 'artbla' || event.fragment.id === 'artbla2') { 
+        rotateToMouse(event.fragment)
+        event.fragment.removeEventListener('mouseenter', test1);
+      }
+  } );
+  
+
+
+function test1(){
+bounds = card.getBoundingClientRect();
+          document.addEventListener('mousemove', rotateToMouse);
+}
+
+function test2(){
+  {
+      document.removeEventListener('mousemove', rotateToMouse);
+          card.style.transform = '';
+          card.style.background = '';
+        }
+}
+function rotateToMouse(e) {
+  card = document.getElementById("artbla");
+  let bounds = card.getBoundingClientRect();
+  
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+  const leftX = mouseX - bounds.x;
+  const topY = mouseY - bounds.y;
+  const center = {
+    x: leftX - bounds.width / 2,
+    y: topY - bounds.height / 2
+  }
+  const distance = Math.sqrt(center.x**2 + center.y**2);
+  
+  card.style.transform = `
+    scale3d(1.07, 1.07, 1.07)
+    rotate3d(
+      ${center.y / 100},
+      ${-center.x / 100},
+      0,
+      ${Math.log(distance)* 2}deg
+    )
+  `;
+  
+  card.querySelector('.glow').style.backgroundImage = `
+    radial-gradient(
+      circle at
+      ${center.x * 2 + bounds.width/2}px
+      ${center.y * 2 + bounds.height/2}px,
+      #ffffff55,
+      #0000000f
+    )
+  `;
+}
+
+
+</script>
