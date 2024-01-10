@@ -53,22 +53,7 @@ function set3D_Card(id, active){
 
 }
 
-  const buildArt= async (id, src)=>{
-    const Target = document.getElementById(id);
-    var scry_id = Target.getAttribute("scry");
 
-    const response = await fetch("https://api.scryfall.com/cards/"+scry_id,{method: "GET"});
-    const myJson = await response.json();
-
-    const Art_Title = Target.getElementsByClassName("title")[0];
-    const Art_IMG = Target.getElementsByClassName("target-image")[0];
-    var LINK = Target.getElementsByTagName("a")[0];
-    
-
-    Art_Title.innerHTML = myJson.card_faces[0].name + " - ["+myJson.collector_number+"/81]";
-    Art_IMG.src = src;
-    LINK.href = myJson.scryfall_uri;
-}
 
   const buildFancyArt= async (id, src)=>{
     const Target = document.getElementById(id);
@@ -84,8 +69,80 @@ function set3D_Card(id, active){
     LINK.href = myJson.scryfall_uri;
 }
 
+      const buildArt= async (id)=>{
+        const Target = document.getElementById(id);
+        var set = Target.getAttribute("set");
+        var nr  = Target.getAttribute("nr");
+        const Art_Title = Target.getElementsByClassName("title")[0];
+        const Art_Image = Target.getElementsByClassName("ART_IMAGE")[0];
+        var LINK = Target.getElementsByTagName("a")[0];
 
+        const response = await fetch("https://api.scryfall.com/cards/a"+set+"/"+nr,{method: "GET"});
+        const myJson = await response.json();
 
+        Art_Title.innerHTML = myJson.card_faces[0].name + " - ["+myJson.collector_number+"/81]";
+        LINK.href = myJson.scryfall_uri;
+        Art_Image.src=myJson.card_faces[0].image_uris.large
+
+        var sections = document.getElementsByClassName("CARD_SECTION")[0]
+        sections.setAttribute("data-background-image") = "https://cards.scryfall.io/art_crop/front/5/e/5eab58c4-cb34-4645-aaf1-6e3010fcee69.jpg?1679451743"
+        console.log(sections)
+}
+    const populateCard = async (id) => {
+      
+      const Target = document.getElementById(id);
+      var LINK = Target.getElementsByTagName("a")[0];
+      const isFlip = Target.getElementsByClassName("FlipButton")[0];
+      isFlip.style.display ='none';
+
+      var set = Target.getAttribute("set");
+      var nr  = Target.getAttribute("nr");
+      var FrontIMG = Target.getElementsByClassName("FrontIMG")[0]; 
+
+       const response = await fetch("https://api.scryfall.com/cards/"+set+"/"+nr,{method: "GET"});
+      const myJson = await response.json();
+      LINK.href = myJson.scryfall_uri;
+      FrontIMG.src = myJson.image_uris.large
+      /*
+        var scry_id = Target.getAttribute("scry");
+        var SPAN = Target.getElementsByTagName("small")[1];
+        var IMG = Target.getElementsByClassName("card-image")[0];
+        var LINK = Target.getElementsByTagName("a")[0];
+        var DIV = Target.getElementsByTagName("div")[0];
+      
+        var imgUri;
+        const response = await fetch("https://api.scryfall.com/cards/"+scry_id,{method: "GET"});
+        const myJson = await response.json();
+          if(myJson.layout === "transform" || myJson.layout === "double_faced_token")
+          {
+              isFlip.style.display = "block";
+              imgUri = [myJson.card_faces[0].image_uris.large,myJson.card_faces[1].image_uris.large]
+              IMG.setAttribute("org", imgUri[0]);
+              IMG.setAttribute("trs", imgUri[1]);
+
+              if(Target.id.split("_")[0].includes("foc")){
+                if(myJson.type_line.includes("Siege")){
+                  IMG.setAttribute("battle", true)
+                  IMG.parentNode.classList.add("card-flip-battle");
+                  IMG.parentNode.parentNode.classList.add("-scale-x-100") 
+                  }else{
+                    IMG.parentNode.classList.add("card-flip-transform");
+                    IMG.parentNode.parentNode.classList.add("-scale-x-100") 
+                  }
+                }
+              if(Target.id.split("_")[0].includes("com")){
+                    IMG.parentNode.classList.add("card-flip-transform");
+                    IMG.parentNode.parentNode.classList.add("-scale-x-100") 
+                }
+          }
+          else{imgUri = [myJson.image_uris.large]}
+
+        if(SPAN !== undefined){SPAN.innerHTML = myJson.name;}
+        IMG.src = imgUri[0];
+
+        LINK.href = myJson.scryfall_uri;
+      */
+    }
 
     const populateFoilCard = async (id) => {
       
@@ -218,51 +275,48 @@ function set3D_Card(id, active){
 
   }
 
-  .rotated {
-    transform: rotate(90deg); /* Equal to rotateZ(45deg) */
-  }
 
   @-webkit-keyframes moveafter {
-  0% {
-  top:100%;
-  left:100%;
-  }
-  50% {
-  top:-100%;
-  left:-100%;
-  }
-  100% {
-  top:-200%;
-  left:-200%;
-  }
-  }
-  @-moz-keyframes moveafter {
-  0% {
-  top:100%;
-  left:100%;
-  }
-  50% {
-  top:-100%;
-  left:-100%;
-  }
-  100% {
-  top:-100%;
-  left:-100%;
-  }
-  }
-  @keyframes moveafter {
-  0% {
-  top:100%;
-  left:100%;
-  }
-  50% {
-  top:-100%;
-  left:-100%;
-  }
-  100% {
-  top:-200%;
-  left:-200%;
-  }
+    0% {
+    top:100%;
+    left:100%;
+    }
+    50% {
+    top:-100%;
+    left:-100%;
+    }
+    100% {
+    top:-200%;
+    left:-200%;
+    }
+    }
+    @-moz-keyframes moveafter {
+    0% {
+    top:100%;
+    left:100%;
+    }
+    50% {
+    top:-100%;
+    left:-100%;
+    }
+    100% {
+    top:-100%;
+    left:-100%;
+    }
+    }
+    @keyframes moveafter {
+    0% {
+    top:100%;
+    left:100%;
+    }
+    50% {
+    top:-100%;
+    left:-100%;
+    }
+    100% {
+    top:-200%;
+    left:-200%;
+    }
   }
 
       .fragment.blur {
@@ -271,6 +325,63 @@ function set3D_Card(id, active){
       .fragment.blur.visible {
         filter: none;
       }
+
+      .fragment.revealCard{
+        .front{
+          opacity: 1;
+        }
+        .back{
+          opacity:0;
+          transition: opacity 500ms;
+        }
+
+
+      }
+      .fragment.revealCard.visible{
+        
+        .front{
+          opacity: 0;
+        }
+        .back{
+          transition: opacity 800ms;
+          opacity: 1;
+        }
+      }
+
+      .fragment.cardBack{
+        transform-style: preserve-3d;
+        .hide{
+          will-change: transform;
+          transition: opacity 500ms;
+          transition-timing-function: ease-in-out;
+          opacity: 1;
+        }  
+              .front,.back {
+        backface-visibility: hidden;
+
+      }
+
+      .back {
+        will-change: transform;
+        transform: rotateY(180deg) ;
+      }
+     
+      }
+      .fragment.cardBack.visible{
+        transform: rotateY(180deg);
+        will-change: transform;
+        transform-style: preserve-3d;
+        transition-duration: 250ms;
+        transition-timing-function: ease-in-out;
+
+
+         .hide{
+
+          transition: opacity 200ms;
+          opacity: 0;
+        }  
+      }
+
 
       * {
   box-sizing: border-box;

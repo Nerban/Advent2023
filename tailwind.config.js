@@ -3,9 +3,7 @@ const plugin = require("tailwindcss/plugin");
 
 const Myclass = plugin(function ({ addUtilities }) {
   addUtilities({
-    ".my-rotate-y-180": {
-      transform: "rotateY(180deg)",
-    },
+
 
     ".card-flip-transform":{
       transform: "rotateY(180deg)",
@@ -48,10 +46,16 @@ module.exports = {
       yellow: colors.amber,
       blue: colors.blue,
       slate: colors.stone,
+      fuchsia: colors.fuchsia,
+      pink:colors.pink,
+      red:colors.red,
+      rose:colors.rose,
     },
     extend: {
       aspectRatio: {
         'card': '63.5 / 88.9',
+        'art-box': '59 / 45',
+        'text-box': '59 / 24'
       },
       backgroundImage: {
         'radial-gradient-yellow': 'radial-gradient(circle, rgba(201,85,0,0.9) 3%, rgba(255,173,0,0.4) 30%, rgba(255,255,255,0) 65%);',
@@ -61,6 +65,10 @@ module.exports = {
     },
   },
   plugins: [Myclass],
-  purge: [ 'dist/**/*.html' ],
+  content: [
+    // Example content paths...
+    './dist/**/*.html',
+    './src/**/*.{js,jsx,ts,tsx,njk,html}',
+  ],
 }
 

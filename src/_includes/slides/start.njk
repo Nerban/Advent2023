@@ -1,5 +1,5 @@
 <!-- start page -->
-<section data-background-image="images/theme.jpg" data-transition="zoom" data-background-opacity="0.5">
+<section data-background-image="/images/theme.jpg" data-transition="zoom" data-background-opacity="0.5">
 <section >
     <h1 class="r-fit-text">Adventskalender</h1>
     <hr class="mx-5">
@@ -9,22 +9,22 @@
         {% for key,value in packs %}
         {%if loop.index <= 24%}
             <a href="#{{key}}">
-                <div class="font-semi-bold hover:outline outline-2 outline-offset-4 bg-cover bg-center bg-blue-300  outline-yellow-500 shadow-blue-900 aspect-square 
+                <div class="font-semi-bold hover:outline outline-2 outline-offset-4 bg-cover bg-center bg-emerald-300  outline-rose-500 shadow-emerald-950 aspect-square text-rose-500
                 {% if loop.index <= packs|length %}
-                hover:bg-[url({{ '../images/art/art'+key+'.png' | url }})] 
+                hover:bg-[url({{ '../images/mom/art/art'+key+'.png' | url }})] 
                 hover:text-transparent
                 {% else %}
                 hover:bg-[url({{'../images/theme.jpg' | url }})] 
-                hover:text-yellow-500
+                hover:text-rose-500
                 {%  endif %}
                 grid place-content-center rounded-md">
-                    <div class="group-hover:drop-shadow-lg shadow-black font-semibold drop-shadow-md">{{key}}</div>
+                    <div class="group-hover:drop-shadow-lg  shadow-black font-semibold drop-shadow-md">{{key}}</div>
                 </div>
             </a>  
         {%endif%}
         {% endfor %}
         {% for i in range(packs|length ,24) %}
-            <a href="#"><div class="font-semi-bold hover:outline outline-2 outline-offset-4 bg-cover bg-center bg-blue-200 hover:text-yellow-500  outline-yellow-500 shadow-blue-900 aspect-square hover:bg-[url({{ '../images/theme.jpg' | url }})]  grid place-content-center rounded-md">
+            <a href="#"><div class="font-semi-bold hover:outline outline-2 outline-offset-4 bg-cover bg-center bg-emerald-200 hover:text-yellow-500  outline-rose-500 shadow-emerald-950 aspect-square hover:bg-[url({{ '../images/theme.jpg' | url }})]  grid place-content-center rounded-md">
                <div class=" group-hover:drop-shadow-lg shadow-black font-semibold drop-shadow-md"> {{loop.index + packs|length}} </div>
             </div></a>  
         {% endfor %}
@@ -39,9 +39,9 @@
 
 {%for pack in range(1,7)%}
     <a href="#{{loop.index + 24}}" class="w-1/4">
-        <div class=" w-full aspect-square shrink bg-radial-gradient-blue hover:bg-radial-gradient-yellow rounded-full">
+        <div class=" w-full aspect-square shrink  hover:bg-radial-gradient-yellow rounded-full">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" 
-            class="fill-yellow-700 stroke-[.5] hover:fill-yellow-600 stroke-yellow-900 
+            class="fill-yellow-700 stroke-[.5]  stroke-emerald-900 
                 hover:scale-110 duration-100 hover:drop-shadow-lg" 
             viewBox="0 0 32 32">
                 {% include "svg/mom.njk" %}

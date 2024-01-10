@@ -20,14 +20,14 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --r-background-color: #002b36;
+  --r-background-color: #022c22; // emerald 950
   --r-main-font: Lato, sans-serif;
   --r-main-font-size: 40px;
-  --r-main-color: #93a1a1;
+  --r-main-color: #ffe4e6;
   --r-block-margin: 0px;
   --r-heading-margin: 0 0 20px 0;
   --r-heading-font: League Gothic, Impact, sans-serif;
-  --r-heading-color: #eee8d5;
+  --r-heading-color: #10b981;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
   --r-heading-text-transform: uppercase;
@@ -39,9 +39,9 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading3-size: 1.55em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #268bd2;
+  --r-link-color: #ffe4e6;
   --r-link-color-dark: #1a6091;
-  --r-link-color-hover: #78b9e6;
+  --r-link-color-hover: #f43f5e;
   --r-selection-background-color: #d33682;
   --r-selection-color: #fff;
 }
